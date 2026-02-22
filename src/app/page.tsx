@@ -4,6 +4,9 @@ import { Modules } from "@/components/modules";
 import { Workflow } from "@/components/workflow";
 import { DemoProducts } from "@/components/demo-products";
 import { TechStack } from "@/components/tech-stack";
+import { Pricing } from "@/components/pricing";
+import { FinalCta } from "@/components/cta";
+import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (
@@ -14,6 +17,9 @@ export default function Home() {
       <Workflow />
       <DemoProducts />
       <TechStack />
+      <Pricing />
+      <FinalCta />
+      <Footer />
     </>
   );
 }
