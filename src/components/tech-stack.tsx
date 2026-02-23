@@ -1,4 +1,5 @@
 import { Container } from "@/components";
+import { Reveal } from "@/components/shared";
 
 type TechName =
   | "Next.js"
@@ -12,7 +13,7 @@ type TechName =
   | "Docker";
 
 function TechLogo({ name }: { name: TechName }) {
-  const base = "h-4 w-4 opacity-80";
+  const base = "h-5 w-5 opacity-80";
 
   switch (name) {
     case "Next.js":
@@ -192,23 +193,57 @@ function TechLogo({ name }: { name: TechName }) {
   }
 }
 
-const tech: Array<{ name: TechName; hover: string }> = [
-  { name: "Next.js", hover: "hover:bg-white/6 hover:shadow-[0_18px_70px_-40px_rgba(226,232,240,0.35)]" },
-  { name: "React", hover: "hover:bg-cyan-400/10 hover:shadow-[0_18px_70px_-40px_rgba(34,211,238,0.40)]" },
-  { name: "Node.js", hover: "hover:bg-emerald-400/8 hover:shadow-[0_18px_70px_-40px_rgba(52,211,153,0.35)]" },
-  { name: "MongoDB", hover: "hover:bg-emerald-400/8 hover:shadow-[0_18px_70px_-40px_rgba(52,211,153,0.35)]" },
-  { name: "OpenAI", hover: "hover:bg-slate-200/6 hover:shadow-[0_18px_70px_-40px_rgba(226,232,240,0.30)]" },
-  { name: "Stripe", hover: "hover:bg-indigo-400/10 hover:shadow-[0_18px_70px_-40px_rgba(99,102,241,0.40)]" },
-  { name: "React Native", hover: "hover:bg-cyan-400/10 hover:shadow-[0_18px_70px_-40px_rgba(34,211,238,0.40)]" },
-  { name: "AWS", hover: "hover:bg-amber-400/8 hover:shadow-[0_18px_70px_-40px_rgba(251,191,36,0.28)]" },
-  { name: "Docker", hover: "hover:bg-sky-400/10 hover:shadow-[0_18px_70px_-40px_rgba(56,189,248,0.40)]" },
+const tech: TechName[] = [
+  "Next.js",
+  "React",
+  "Node.js",
+  "MongoDB",
+  "OpenAI",
+  "Stripe",
+  "React Native",
+  "AWS",
+  "Docker",
 ];
+
+function MarqueeRow({ reverse }: { reverse?: boolean }) {
+  const items = [...tech, ...tech];
+
+  return (
+    <div className="marquee relative overflow-hidden">
+      <div
+        className={`marquee-track flex items-center gap-3 sm:gap-4 ${
+          reverse ? "[animation-direction:reverse]" : ""
+        } group-hover:[animation-play-state:paused]`}
+      >
+        {items.map((name, idx) => (
+          <div
+            key={`${name}-${idx}`}
+            className="group/item inline-flex h-12 shrink-0 items-center gap-2 rounded-xl border border-border/70 bg-white/5 px-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] transition-all duration-200"
+          >
+            <div className="relative">
+              <div
+                className="pointer-events-none absolute -inset-2 rounded-full bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.14),rgba(34,211,238,0.08),transparent_60%)] blur-md opacity-0 transition-opacity duration-200 group-hover/item:opacity-100"
+                aria-hidden="true"
+              />
+              <div className="transition-all duration-200 [filter:grayscale(1)_saturate(0.7)_brightness(0.85)] group-hover/item:[filter:grayscale(0)_saturate(1)_brightness(1.1)]">
+                <TechLogo name={name} />
+              </div>
+            </div>
+            <span className="text-sm font-medium text-foreground/75 transition-all duration-200 group-hover/item:text-foreground group-hover/item:drop-shadow-[0_0_18px_rgba(59,130,246,0.20)]">
+              {name}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export function TechStack() {
   return (
     <section className="py-16">
       <Container>
-        <div className="mx-auto max-w-2xl text-center">
+        <Reveal className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
             Built with Modern Tech
           </h2>
@@ -216,19 +251,27 @@ export function TechStack() {
             We use reliable technologies to build scalable websites, apps and
             AI-powered systems.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="mt-10 flex flex-wrap justify-center gap-3">
-          {tech.map(({ name, hover }) => (
+        <Reveal className="relative mt-10">
+          <div
+            className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[260px] w-[860px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.14),rgba(34,211,238,0.08),transparent_60%)] blur-3xl"
+            aria-hidden="true"
+          />
+
+          <div className="group relative overflow-hidden rounded-2xl border border-border bg-white/2 px-4 py-6 sm:px-6">
             <div
-              key={name}
-              className={`group flex items-center gap-2 rounded-xl border border-border bg-white/5 px-4 py-3 text-sm font-medium text-foreground shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/40 ${hover}`}
-            >
-              <TechLogo name={name} />
-              <span>{name}</span>
-            </div>
-          ))}
-        </div>
+              className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-background to-transparent"
+              aria-hidden="true"
+            />
+            <div
+              className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-background to-transparent"
+              aria-hidden="true"
+            />
+
+            <MarqueeRow />
+          </div>
+        </Reveal>
       </Container>
     </section>
   );

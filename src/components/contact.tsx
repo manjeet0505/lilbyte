@@ -3,6 +3,7 @@
 import { useId, useState } from "react";
 
 import { Container } from "@/components";
+import { Reveal } from "@/components/shared";
 
 type ProjectType = "Website" | "SaaS Product" | "Mobile App" | "AI Integration";
 
@@ -31,12 +32,14 @@ export function Contact() {
       <Container>
         <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
           <div>
-            <h2 className="font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-              Let’s Talk About Your Product
-            </h2>
-            <p className="mt-4 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
-              Tell us about your idea and we’ll get back to you within 24 hours.
-            </p>
+            <Reveal>
+              <h2 className="font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+                Let’s Talk About Your Product
+              </h2>
+              <p className="mt-4 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
+                Tell us about your idea and we’ll get back to you within 24 hours.
+              </p>
+            </Reveal>
 
             <form
               className="mt-8 space-y-5"
@@ -126,7 +129,7 @@ export function Contact() {
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="inline-flex h-11 w-full items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:w-auto"
+                  className="motion-button inline-flex h-11 w-full items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:w-auto"
                 >
                   Send Message
                 </button>
@@ -139,20 +142,22 @@ export function Contact() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold text-foreground">
-              Or Book a Call Instantly
-            </h3>
+            <Reveal delayMs={120}>
+              <h3 className="text-lg font-semibold text-foreground">
+                Or Book a Call Instantly
+              </h3>
 
-            <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted">
-              Prefer scheduling right away? Book a call in seconds using our
-              calendar.
-            </p>
+              <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted">
+                Prefer scheduling right away? Book a call in seconds using our
+                calendar.
+              </p>
+            </Reveal>
 
             <div className="mt-6">
               <button
                 type="button"
                 onClick={openCalendly}
-                className="inline-flex h-11 w-full items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:w-auto"
+                className="motion-button inline-flex h-11 w-full items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:w-auto"
               >
                 Book a Free Consultation
               </button>

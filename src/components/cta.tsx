@@ -1,10 +1,11 @@
 import { Container } from "@/components";
+import { Reveal } from "@/components/shared";
 
 export function FinalCta() {
   return (
     <section id="final-cta" className="py-24">
       <Container>
-        <div className="relative rounded-2xl border border-border bg-gradient-to-r from-blue-500/20 via-sky-500/20 to-cyan-400/20 p-12 text-center">
+        <Reveal className="relative rounded-2xl border border-border bg-gradient-to-r from-blue-500/20 via-sky-500/20 to-cyan-400/20 p-12 text-center">
           <div
             className="pointer-events-none absolute -inset-8 -z-10 rounded-3xl bg-gradient-to-r from-blue-500/10 via-cyan-400/10 to-transparent blur-2xl"
             aria-hidden="true"
@@ -21,12 +22,12 @@ export function FinalCta() {
           <div className="mt-8 flex justify-center">
             <a
               href="#contact"
-              className="inline-flex h-11 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              className="motion-button inline-flex h-11 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               Book a Free Consultation
             </a>
           </div>
-        </div>
+        </Reveal>
       </Container>
     </section>
   );
