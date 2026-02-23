@@ -49,200 +49,201 @@ export function DemoProducts() {
               className="group overflow-hidden rounded-2xl border border-border bg-card transition-all duration-200 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_20px_70px_-28px_rgba(59,130,246,0.6)]"
             >
               <div className="relative h-44 border-b border-border bg-background">
-                <div
-                  className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_35%_25%,rgba(59,130,246,0.18),rgba(34,211,238,0.08),transparent_60%)] opacity-60"
-                  aria-hidden="true"
-                />
-                <div
-                  className={`pointer-events-none absolute inset-0 bg-gradient-to-tr ${p.gradient}`}
-                  aria-hidden="true"
-                />
+                <div className="absolute inset-0 p-4">
+                  <div className="relative h-full overflow-hidden rounded-2xl border border-border bg-[linear-gradient(180deg,rgb(10,12,18),rgb(6,8,12))]">
+                    <div
+                      className="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-[linear-gradient(90deg,rgba(59,130,246,0.35),rgba(34,211,238,0.22),transparent)] blur-md opacity-70"
+                      aria-hidden="true"
+                    />
 
-                <div
-                  className="pointer-events-none absolute inset-3 rounded-2xl border border-border bg-card/50 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),inset_0_-18px_30px_rgba(0,0,0,0.45)]"
-                  aria-hidden="true"
-                />
-
-                <div className="absolute inset-0 p-4 transition-transform duration-200 group-hover:-translate-y-0.5">
-                  <div className="overflow-hidden rounded-2xl border border-border bg-card/60 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
-                    <div className="flex items-center justify-between border-b border-border bg-background/40 px-3 py-2">
-                      <div className="flex items-center gap-2">
-                        <div className="h-2.5 w-2.5 rounded-full bg-foreground/20" />
-                        <div className="h-2.5 w-2.5 rounded-full bg-foreground/15" />
-                        <div className="h-2.5 w-2.5 rounded-full bg-foreground/10" />
+                    <div className="relative h-full transition-transform duration-300 ease-out group-hover:scale-[1.03]">
+                      <div className="flex items-center gap-2 border-b border-border bg-[linear-gradient(180deg,rgb(16,18,26),rgb(10,12,18))] px-3 py-2">
+                        <div className="flex items-center gap-2">
+                          <div className="h-2.5 w-2.5 rounded-full bg-rose-400" />
+                          <div className="h-2.5 w-2.5 rounded-full bg-amber-300" />
+                          <div className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
+                        </div>
+                        <div className="ml-auto h-2.5 w-16 rounded bg-slate-700" />
                       </div>
-                      <div className="h-2.5 w-20 rounded bg-foreground/10" />
-                    </div>
 
-                    <div className="relative px-3 py-3">
-                      <div
-                        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-blue-500/10 to-transparent"
-                        aria-hidden="true"
-                      />
+                      <div className="px-3 py-3">
+                        <div className="h-5 rounded-lg bg-[linear-gradient(90deg,rgb(17,24,39),rgb(10,12,18))]" />
 
-                      {p.name === "AI Powered S3 Dashboard" ? (
-                        <div className="relative grid grid-cols-12 gap-3">
-                          <div className="col-span-3 hidden rounded-xl border border-border bg-background/40 p-2 sm:block">
-                            <div className="h-2.5 w-12 rounded bg-foreground/15" />
-                            <div className="mt-3 space-y-2">
-                              <div className="h-2.5 w-full rounded bg-foreground/10" />
-                              <div className="h-2.5 w-10/12 rounded bg-foreground/10" />
-                              <div className="h-2.5 w-8/12 rounded bg-foreground/10" />
+                        {p.name === "AI Powered S3 Dashboard" ? (
+                          <div className="mt-3 grid grid-cols-12 gap-2">
+                            <div className="col-span-4 rounded-lg border border-border bg-[linear-gradient(180deg,rgb(15,23,42),rgb(10,12,18))] p-2">
+                              <div className="flex items-center gap-2">
+                                <div className="h-5 w-5 rounded-md bg-[linear-gradient(180deg,rgb(59,130,246),rgb(34,211,238))]" />
+                                <div className="h-2 w-14 rounded bg-slate-700" />
+                              </div>
+                              <div className="mt-3 space-y-2">
+                                <div className="h-2 w-full rounded bg-slate-800" />
+                                <div className="h-2 w-11/12 rounded bg-slate-800" />
+                                <div className="h-2 w-9/12 rounded bg-slate-800" />
+                                <div className="h-2 w-10/12 rounded bg-slate-800" />
+                              </div>
+                            </div>
+                            <div className="col-span-8">
+                              <div className="grid grid-cols-3 gap-2">
+                                <div className="rounded-lg border border-border bg-[linear-gradient(180deg,rgb(17,24,39),rgb(10,12,18))] p-2">
+                                  <div className="h-2 w-12 rounded bg-slate-700" />
+                                  <div className="mt-2 h-3.5 w-14 rounded bg-slate-600" />
+                                </div>
+                                <div className="rounded-lg border border-border bg-[linear-gradient(180deg,rgb(17,24,39),rgb(10,12,18))] p-2">
+                                  <div className="h-2 w-12 rounded bg-slate-700" />
+                                  <div className="mt-2 h-3.5 w-14 rounded bg-slate-600" />
+                                </div>
+                                <div className="rounded-lg border border-border bg-[linear-gradient(180deg,rgb(17,24,39),rgb(10,12,18))] p-2">
+                                  <div className="h-2 w-12 rounded bg-slate-700" />
+                                  <div className="mt-2 h-3.5 w-14 rounded bg-slate-600" />
+                                </div>
+                              </div>
+                              <div className="mt-2 rounded-lg border border-border bg-[linear-gradient(180deg,rgb(15,23,42),rgb(10,12,18))] p-2">
+                                <div className="flex items-center justify-between">
+                                  <div className="h-2 w-24 rounded bg-slate-700" />
+                                  <div className="h-2 w-10 rounded bg-slate-800" />
+                                </div>
+                                <div className="mt-2 grid grid-cols-12 items-end gap-1">
+                                  <div className="col-span-2 h-6 rounded bg-[linear-gradient(180deg,rgb(59,130,246),rgb(14,165,233))]" />
+                                  <div className="col-span-2 h-9 rounded bg-[linear-gradient(180deg,rgb(59,130,246),rgb(34,211,238))]" />
+                                  <div className="col-span-2 h-5 rounded bg-[linear-gradient(180deg,rgb(14,165,233),rgb(34,211,238))]" />
+                                  <div className="col-span-2 h-10 rounded bg-[linear-gradient(180deg,rgb(34,211,238),rgb(59,130,246))]" />
+                                  <div className="col-span-2 h-7 rounded bg-[linear-gradient(180deg,rgb(59,130,246),rgb(14,165,233))]" />
+                                  <div className="col-span-2 h-8 rounded bg-[linear-gradient(180deg,rgb(14,165,233),rgb(34,211,238))]" />
+                                </div>
+                              </div>
                             </div>
                           </div>
+                        ) : null}
 
-                          <div className="col-span-12 sm:col-span-9">
-                            <div className="grid grid-cols-3 gap-2">
-                              <div className="rounded-xl border border-border bg-background/40 p-2">
-                                <div className="h-2.5 w-10 rounded bg-foreground/15" />
-                                <div className="mt-2 h-4 w-12 rounded bg-foreground/20" />
-                              </div>
-                              <div className="rounded-xl border border-border bg-background/40 p-2">
-                                <div className="h-2.5 w-10 rounded bg-foreground/15" />
-                                <div className="mt-2 h-4 w-12 rounded bg-foreground/20" />
-                              </div>
-                              <div className="rounded-xl border border-border bg-background/40 p-2">
-                                <div className="h-2.5 w-10 rounded bg-foreground/15" />
-                                <div className="mt-2 h-4 w-12 rounded bg-foreground/20" />
+                        {p.name === "Senior Junior Connect (AI Powered)" ? (
+                          <div className="mt-3 grid grid-cols-12 gap-2">
+                            <div className="col-span-5 rounded-lg border border-border bg-[linear-gradient(180deg,rgb(15,23,42),rgb(10,12,18))] p-2">
+                              <div className="h-2 w-16 rounded bg-slate-700" />
+                              <div className="mt-2 space-y-2">
+                                <div className="flex items-center gap-2 rounded-lg bg-[linear-gradient(180deg,rgb(17,24,39),rgb(10,12,18))] p-2">
+                                  <div className="h-5 w-5 rounded-full bg-slate-800" />
+                                  <div className="h-2 w-16 rounded bg-slate-700" />
+                                </div>
+                                <div className="flex items-center gap-2 rounded-lg bg-[linear-gradient(180deg,rgb(17,24,39),rgb(10,12,18))] p-2">
+                                  <div className="h-5 w-5 rounded-full bg-slate-800" />
+                                  <div className="h-2 w-14 rounded bg-slate-700" />
+                                </div>
+                                <div className="flex items-center gap-2 rounded-lg bg-[linear-gradient(180deg,rgb(17,24,39),rgb(10,12,18))] p-2">
+                                  <div className="h-5 w-5 rounded-full bg-slate-800" />
+                                  <div className="h-2 w-12 rounded bg-slate-700" />
+                                </div>
                               </div>
                             </div>
 
-                            <div className="mt-3 rounded-xl border border-border bg-background/40 p-3">
+                            <div className="col-span-7 rounded-lg border border-border bg-[linear-gradient(180deg,rgb(15,23,42),rgb(10,12,18))] p-2">
                               <div className="flex items-center justify-between">
-                                <div className="h-2.5 w-20 rounded bg-foreground/15" />
-                                <div className="h-2.5 w-10 rounded bg-foreground/10" />
+                                <div className="h-2 w-20 rounded bg-slate-700" />
+                                <div className="h-2 w-10 rounded bg-slate-800" />
                               </div>
-                              <div className="mt-3 grid grid-cols-12 items-end gap-1">
-                                <div className="col-span-2 h-7 rounded bg-gradient-to-t from-blue-500/75 via-sky-500/35 to-transparent" />
-                                <div className="col-span-2 h-10 rounded bg-gradient-to-t from-blue-500/80 via-sky-500/40 to-transparent" />
-                                <div className="col-span-2 h-6 rounded bg-gradient-to-t from-sky-500/75 via-cyan-400/30 to-transparent" />
-                                <div className="col-span-2 h-11 rounded bg-gradient-to-t from-cyan-400/75 via-sky-500/30 to-transparent" />
-                                <div className="col-span-2 h-8 rounded bg-gradient-to-t from-blue-500/75 via-sky-500/35 to-transparent" />
-                                <div className="col-span-2 h-9 rounded bg-gradient-to-t from-sky-500/75 via-cyan-400/30 to-transparent" />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      ) : null}
-
-                      {p.name === "Senior Junior Connect (AI Powered)" ? (
-                        <div className="relative grid grid-cols-12 gap-3">
-                          <div className="col-span-12 rounded-xl border border-border bg-background/40 p-3">
-                            <div className="flex items-center justify-between">
-                              <div className="flex items-center -space-x-1">
-                                <div className="h-6 w-6 rounded-full border border-border bg-background/60" />
-                                <div className="h-6 w-6 rounded-full border border-border bg-background/60" />
-                                <div className="h-6 w-6 rounded-full border border-border bg-background/60" />
-                              </div>
-                              <div className="h-2.5 w-20 rounded bg-foreground/10" />
-                            </div>
-
-                            <div className="mt-3 space-y-2">
-                              <div className="w-[78%] rounded-2xl bg-background/60 px-3 py-2">
-                                <div className="h-2.5 w-28 rounded bg-foreground/15" />
-                                <div className="mt-2 h-2.5 w-40 rounded bg-foreground/10" />
-                              </div>
-                              <div className="ml-auto w-[72%] rounded-2xl bg-primary/15 px-3 py-2">
-                                <div className="h-2.5 w-24 rounded bg-foreground/15" />
-                                <div className="mt-2 h-2.5 w-36 rounded bg-foreground/10" />
-                              </div>
-                              <div className="w-[84%] rounded-2xl bg-background/60 px-3 py-2">
-                                <div className="h-2.5 w-34 rounded bg-foreground/15" />
-                                <div className="mt-2 h-2.5 w-28 rounded bg-foreground/10" />
+                              <div className="mt-2 space-y-2">
+                                <div className="w-[82%] rounded-xl bg-[linear-gradient(180deg,rgb(17,24,39),rgb(10,12,18))] px-3 py-2">
+                                  <div className="h-2 w-28 rounded bg-slate-700" />
+                                  <div className="mt-2 h-2 w-36 rounded bg-slate-800" />
+                                </div>
+                                <div className="ml-auto w-[76%] rounded-xl bg-[linear-gradient(180deg,rgb(30,41,59),rgb(10,12,18))] px-3 py-2">
+                                  <div className="h-2 w-24 rounded bg-slate-700" />
+                                  <div className="mt-2 h-2 w-32 rounded bg-slate-800" />
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                      ) : null}
+                        ) : null}
 
-                      {p.name === "AI Resume Analyzer" ? (
-                        <div className="relative grid grid-cols-12 gap-3">
-                          <div className="col-span-7 rounded-xl border border-border bg-background/40 p-3">
-                            <div className="h-2.5 w-24 rounded bg-foreground/15" />
-                            <div className="mt-3 rounded-xl border border-border bg-background/60 p-3">
+                        {p.name === "AI Resume Analyzer" ? (
+                          <div className="mt-3 grid grid-cols-12 gap-2">
+                            <div className="col-span-7 rounded-lg border border-border bg-[linear-gradient(180deg,rgb(15,23,42),rgb(10,12,18))] p-2">
                               <div className="flex items-center justify-between">
-                                <div className="h-2.5 w-16 rounded bg-foreground/15" />
-                                <div className="h-6 w-6 rounded-lg bg-foreground/10" />
+                                <div className="h-2 w-20 rounded bg-slate-700" />
+                                <div className="h-2 w-10 rounded bg-slate-800" />
                               </div>
-                              <div className="mt-3 h-8 rounded-lg bg-gradient-to-r from-blue-500/15 via-sky-500/10 to-transparent" />
-                              <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-foreground/10">
-                                <div className="h-full w-7/12 rounded-full bg-gradient-to-r from-blue-500/70 via-sky-500/60 to-cyan-400/60" />
+                              <div className="mt-2 rounded-lg border border-border bg-[linear-gradient(180deg,rgb(17,24,39),rgb(10,12,18))] p-2">
+                                <div className="h-2 w-24 rounded bg-slate-700" />
+                                <div className="mt-2 space-y-2">
+                                  <div className="h-2 w-full rounded bg-slate-800" />
+                                  <div className="h-2 w-11/12 rounded bg-slate-800" />
+                                  <div className="h-2 w-10/12 rounded bg-slate-800" />
+                                  <div className="h-2 w-9/12 rounded bg-slate-800" />
+                                </div>
+                                <div className="mt-2 h-6 rounded-md bg-[linear-gradient(90deg,rgb(59,130,246),rgb(34,211,238))]" />
+                              </div>
+                            </div>
+                            <div className="col-span-5 rounded-lg border border-border bg-[linear-gradient(180deg,rgb(15,23,42),rgb(10,12,18))] p-2">
+                              <div className="flex items-center justify-between">
+                                <div className="h-2 w-16 rounded bg-slate-700" />
+                                <div className="rounded-full bg-slate-800 px-2 py-1 text-[10px] text-slate-200">
+                                  Score
+                                </div>
+                              </div>
+                              <div className="mt-2 rounded-lg border border-border bg-[linear-gradient(180deg,rgb(17,24,39),rgb(10,12,18))] p-2">
+                                <div className="text-lg font-semibold text-slate-100">82</div>
+                                <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-slate-800">
+                                  <div className="h-full w-4/5 rounded-full bg-[linear-gradient(90deg,rgb(34,211,238),rgb(59,130,246))]" />
+                                </div>
+                                <div className="mt-2 rounded-md border border-border bg-[linear-gradient(180deg,rgb(15,23,42),rgb(10,12,18))] p-2">
+                                  <div className="h-2 w-20 rounded bg-slate-700" />
+                                  <div className="mt-2 h-2 w-14 rounded bg-slate-800" />
+                                </div>
                               </div>
                             </div>
                           </div>
+                        ) : null}
 
-                          <div className="col-span-5 rounded-xl border border-border bg-background/40 p-3">
-                            <div className="flex items-center justify-between">
-                              <div className="h-2.5 w-14 rounded bg-foreground/15" />
-                              <div className="rounded-full bg-primary/15 px-2 py-1 text-[10px] text-muted">
-                                Score
+                        {p.name === "Startup Analytics Dashboard" ? (
+                          <div className="mt-3 grid grid-cols-12 gap-2">
+                            <div className="col-span-12 grid grid-cols-3 gap-2">
+                              <div className="rounded-lg border border-border bg-[linear-gradient(180deg,rgb(17,24,39),rgb(10,12,18))] p-2">
+                                <div className="h-2 w-14 rounded bg-slate-700" />
+                                <div className="mt-2 h-3.5 w-16 rounded bg-slate-600" />
+                              </div>
+                              <div className="rounded-lg border border-border bg-[linear-gradient(180deg,rgb(17,24,39),rgb(10,12,18))] p-2">
+                                <div className="h-2 w-14 rounded bg-slate-700" />
+                                <div className="mt-2 h-3.5 w-16 rounded bg-slate-600" />
+                              </div>
+                              <div className="rounded-lg border border-border bg-[linear-gradient(180deg,rgb(17,24,39),rgb(10,12,18))] p-2">
+                                <div className="h-2 w-14 rounded bg-slate-700" />
+                                <div className="mt-2 h-3.5 w-16 rounded bg-slate-600" />
                               </div>
                             </div>
-                            <div className="mt-4 rounded-xl border border-border bg-background/60 p-3">
-                              <div className="text-lg font-semibold text-foreground">82</div>
-                              <div className="mt-1 h-2 w-full overflow-hidden rounded-full bg-foreground/10">
-                                <div className="h-full w-4/5 rounded-full bg-gradient-to-r from-cyan-400/60 via-sky-500/60 to-blue-500/60" />
-                              </div>
-                              <div className="mt-2 h-2.5 w-20 rounded bg-foreground/10" />
-                            </div>
-                          </div>
-                        </div>
-                      ) : null}
 
-                      {p.name === "Startup Analytics Dashboard" ? (
-                        <div className="relative grid grid-cols-12 gap-3">
-                          <div className="col-span-12 grid grid-cols-3 gap-2">
-                            <div className="rounded-xl border border-border bg-background/40 p-2">
-                              <div className="h-2.5 w-12 rounded bg-foreground/15" />
-                              <div className="mt-2 h-4 w-14 rounded bg-foreground/20" />
+                            <div className="col-span-8 rounded-lg border border-border bg-[linear-gradient(180deg,rgb(15,23,42),rgb(10,12,18))] p-2">
+                              <div className="flex items-center justify-between">
+                                <div className="h-2 w-24 rounded bg-slate-700" />
+                                <div className="h-2 w-10 rounded bg-slate-800" />
+                              </div>
+                              <div className="mt-2 rounded-lg border border-border bg-[linear-gradient(180deg,rgb(17,24,39),rgb(10,12,18))] p-2">
+                                <div className="mt-2 grid grid-cols-12 items-end gap-1">
+                                  <div className="col-span-2 h-6 rounded bg-[linear-gradient(180deg,rgb(59,130,246),rgb(14,165,233))]" />
+                                  <div className="col-span-2 h-10 rounded bg-[linear-gradient(180deg,rgb(59,130,246),rgb(34,211,238))]" />
+                                  <div className="col-span-2 h-5 rounded bg-[linear-gradient(180deg,rgb(14,165,233),rgb(34,211,238))]" />
+                                  <div className="col-span-2 h-11 rounded bg-[linear-gradient(180deg,rgb(34,211,238),rgb(59,130,246))]" />
+                                  <div className="col-span-2 h-7 rounded bg-[linear-gradient(180deg,rgb(59,130,246),rgb(14,165,233))]" />
+                                  <div className="col-span-2 h-8 rounded bg-[linear-gradient(180deg,rgb(14,165,233),rgb(34,211,238))]" />
+                                </div>
+                              </div>
                             </div>
-                            <div className="rounded-xl border border-border bg-background/40 p-2">
-                              <div className="h-2.5 w-12 rounded bg-foreground/15" />
-                              <div className="mt-2 h-4 w-14 rounded bg-foreground/20" />
-                            </div>
-                            <div className="rounded-xl border border-border bg-background/40 p-2">
-                              <div className="h-2.5 w-12 rounded bg-foreground/15" />
-                              <div className="mt-2 h-4 w-14 rounded bg-foreground/20" />
-                            </div>
-                          </div>
 
-                          <div className="col-span-7 rounded-xl border border-border bg-background/40 p-3">
-                            <div className="flex items-center justify-between">
-                              <div className="h-2.5 w-20 rounded bg-foreground/15" />
-                              <div className="h-2.5 w-10 rounded bg-foreground/10" />
-                            </div>
-                            <div className="mt-3 grid grid-cols-12 items-end gap-1">
-                              <div className="col-span-2 h-6 rounded bg-gradient-to-t from-blue-500/70 via-sky-500/30 to-transparent" />
-                              <div className="col-span-2 h-9 rounded bg-gradient-to-t from-blue-500/75 via-sky-500/35 to-transparent" />
-                              <div className="col-span-2 h-5 rounded bg-gradient-to-t from-sky-500/70 via-cyan-400/25 to-transparent" />
-                              <div className="col-span-2 h-10 rounded bg-gradient-to-t from-cyan-400/70 via-sky-500/25 to-transparent" />
-                              <div className="col-span-2 h-7 rounded bg-gradient-to-t from-blue-500/70 via-sky-500/30 to-transparent" />
-                              <div className="col-span-2 h-8 rounded bg-gradient-to-t from-sky-500/70 via-cyan-400/25 to-transparent" />
-                            </div>
-                          </div>
-
-                          <div className="col-span-5 rounded-xl border border-border bg-background/40 p-3">
-                            <div className="h-2.5 w-16 rounded bg-foreground/15" />
-                            <div className="mt-3 space-y-2">
-                              <div className="grid grid-cols-12 items-center gap-2">
-                                <div className="col-span-6 h-2.5 rounded bg-foreground/10" />
-                                <div className="col-span-3 h-2.5 rounded bg-foreground/10" />
-                                <div className="col-span-3 h-2.5 rounded bg-foreground/10" />
-                              </div>
-                              <div className="grid grid-cols-12 items-center gap-2">
-                                <div className="col-span-5 h-2.5 rounded bg-foreground/10" />
-                                <div className="col-span-4 h-2.5 rounded bg-foreground/10" />
-                                <div className="col-span-3 h-2.5 rounded bg-foreground/10" />
-                              </div>
-                              <div className="grid grid-cols-12 items-center gap-2">
-                                <div className="col-span-7 h-2.5 rounded bg-foreground/10" />
-                                <div className="col-span-2 h-2.5 rounded bg-foreground/10" />
-                                <div className="col-span-3 h-2.5 rounded bg-foreground/10" />
+                            <div className="col-span-4 rounded-lg border border-border bg-[linear-gradient(180deg,rgb(15,23,42),rgb(10,12,18))] p-2">
+                              <div className="h-2 w-16 rounded bg-slate-700" />
+                              <div className="mt-2 space-y-2">
+                                <div className="rounded-lg border border-border bg-[linear-gradient(180deg,rgb(17,24,39),rgb(10,12,18))] p-2">
+                                  <div className="h-2 w-14 rounded bg-slate-700" />
+                                  <div className="mt-2 h-2 w-full rounded bg-slate-800" />
+                                </div>
+                                <div className="rounded-lg border border-border bg-[linear-gradient(180deg,rgb(17,24,39),rgb(10,12,18))] p-2">
+                                  <div className="h-2 w-10 rounded bg-slate-700" />
+                                  <div className="mt-2 h-2 w-10/12 rounded bg-slate-800" />
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                      ) : null}
+                        ) : null}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -253,7 +254,7 @@ export function DemoProducts() {
                 />
               </div>
 
-              <div className="p-6">
+              <div className="px-6 pb-7 pt-7">
                 <h3 className="text-base font-semibold text-foreground">
                   {p.name}
                 </h3>
@@ -272,7 +273,7 @@ export function DemoProducts() {
                   ))}
                 </div>
 
-                <div className="mt-6">
+                <div className="mt-7">
                   <a
                     href="#demo"
                     className="inline-flex h-10 w-full items-center justify-center rounded-full bg-primary px-4 text-sm font-semibold text-primary-foreground transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
