@@ -4,7 +4,11 @@ export function FinalCta() {
   return (
     <section id="final-cta" className="py-24">
       <Container>
-        <div className="rounded-2xl border border-border bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-cyan-500/20 p-12 text-center">
+        <div className="relative rounded-2xl border border-border bg-gradient-to-r from-blue-500/20 via-sky-500/20 to-cyan-400/20 p-12 text-center">
+          <div
+            className="pointer-events-none absolute -inset-8 -z-10 rounded-3xl bg-gradient-to-r from-blue-500/10 via-cyan-400/10 to-transparent blur-2xl"
+            aria-hidden="true"
+          />
           <h2 className="font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
             Let’s Build Your Next Digital Product
           </h2>

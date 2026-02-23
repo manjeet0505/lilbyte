@@ -57,8 +57,8 @@ export function Pricing() {
               key={tier.name}
               className={
                 tier.highlighted
-                  ? "relative rounded-2xl border border-primary bg-card p-8 shadow-2xl"
-                  : "rounded-2xl border border-border bg-card p-8"
+                  ? "relative rounded-2xl border border-primary bg-card p-8 shadow-2xl transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_22px_80px_-30px_rgba(59,130,246,0.65)]"
+                  : "rounded-2xl border border-border bg-card p-8 transition-all duration-200 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_18px_60px_-25px_rgba(59,130,246,0.55)]"
               }
             >
               {tier.highlighted ? (

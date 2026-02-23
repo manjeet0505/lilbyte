@@ -41,7 +41,7 @@ export function Workflow() {
           {steps.map((step, index) => (
             <div
               key={step.title}
-              className="relative rounded-xl border border-border bg-card p-6"
+              className="relative rounded-xl border border-border bg-card p-6 transition-all duration-200 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_18px_60px_-25px_rgba(59,130,246,0.55)]"
             >
               <div className="flex items-start gap-4">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-border bg-background text-sm font-semibold text-foreground">

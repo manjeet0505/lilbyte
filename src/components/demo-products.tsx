@@ -46,7 +46,7 @@ export function DemoProducts() {
           {products.map((p) => (
             <div
               key={p.name}
-              className="group overflow-hidden rounded-2xl border border-border bg-card transition-all duration-200 hover:-translate-y-1 hover:border-foreground/15 hover:shadow-2xl"
+              className="group overflow-hidden rounded-2xl border border-border bg-card transition-all duration-200 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_20px_70px_-28px_rgba(59,130,246,0.6)]"
             >
               <div className="relative h-44 border-b border-border bg-background">
                 <div

@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #070a12;
-  --foreground: #e7eaf3;
-  --muted: #a3adc2;
-  --card: #0b1020;
-  --surface: #0e1630;
-  --border: rgba(255, 255, 255, 0.10);
-  --primary: #7c3aed;
-  --primary-foreground: #ffffff;
+  --background: #05070E;
+  --foreground: #E2E8F0;
+  --muted: #94A3B8;
+  --card: #0F172A;
+  --surface: #0B1220;
+  --border: #1E293B;
+  --primary: #3B82F6;
+  --primary-foreground: #05070E;
 }
 
 @theme inline {
@@ -32,4 +32,53 @@ body {
   background: var(--color-background);
   color: var(--color-foreground);
   font-family: var(--font-sans);
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: -40vmax;
+  pointer-events: none;
+  z-index: -1;
+  filter: blur(80px);
+  opacity: 0.25;
+}
+
+body::before {
+  background: radial-gradient(
+    600px circle at 85% 15%,
+    rgba(59, 130, 246, 0.35),
+    transparent 60%
+  );
+}
+
+body::after {
+  background: radial-gradient(
+    700px circle at 15% 85%,
+    rgba(34, 211, 238, 0.25),
+    transparent 60%
+  );
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes bar-pulse {
+  0%,
+  100% {
+    opacity: 0.75;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
 }
