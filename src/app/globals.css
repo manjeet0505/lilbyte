@@ -109,6 +109,16 @@ body::after {
   }
 }
 
+@keyframes hero-media-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, -10px, 0) scale(1.004);
+  }
+}
+
 @keyframes motion-fade-up {
   0% {
     opacity: 0;
@@ -156,6 +166,54 @@ body::after {
 .hero-glow {
   will-change: transform;
   animation: hero-glow-drift 14s var(--ease-out-ui) infinite;
+}
+
+.hero-media {
+  -webkit-mask-image: radial-gradient(
+    120% 120% at 40% 40%,
+    #000 60%,
+    rgba(0, 0, 0, 0.35) 74%,
+    transparent 92%
+  );
+  mask-image: radial-gradient(
+    120% 120% at 40% 40%,
+    #000 60%,
+    rgba(0, 0, 0, 0.35) 74%,
+    transparent 92%
+  );
+  will-change: transform, box-shadow;
+  animation: hero-media-drift 12s ease-in-out infinite;
+  transition:
+    transform 600ms var(--ease-out-ui),
+    box-shadow 600ms var(--ease-out-ui),
+    filter 600ms var(--ease-out-ui);
+}
+
+.hero-media::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  pointer-events: none;
+  border-radius: inherit;
+  background:
+    radial-gradient(
+      90% 80% at 22% 20%,
+      rgba(59, 130, 246, 0.18),
+      transparent 62%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(5, 7, 14, 0.65),
+      rgba(5, 7, 14, 0.12) 40%,
+      transparent 75%
+    );
+  mix-blend-mode: screen;
+  opacity: 0.6;
+}
+
+.hero-media:hover {
+  box-shadow: 0 60px 160px -110px rgba(59, 130, 246, 0.9);
+  filter: saturate(1.02) contrast(1.02);
 }
 
 .motion-card {
@@ -224,6 +282,7 @@ body::after {
   }
 
   .hero-glow,
+  .hero-media,
   .marquee-track {
     animation: none !important;
     transform: none;

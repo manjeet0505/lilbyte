@@ -56,11 +56,6 @@ export function Hero() {
             className="hero-item relative"
             style={{ "--enter-delay": "440ms" } as never}
           >
-            <div
-              className="pointer-events-none absolute -inset-10 -z-10 rounded-[32px] bg-[radial-gradient(circle_at_35%_30%,rgba(59,130,246,0.32),rgba(34,211,238,0.16),transparent_62%)] blur-3xl"
-              aria-hidden="true"
-            />
-
             <div className="relative h-[440px]">
               <div className="relative mx-auto w-full max-w-xl">
                 <div
@@ -68,7 +63,36 @@ export function Hero() {
                   aria-hidden="true"
                 />
 
-                <div className="group relative overflow-hidden rounded-2xl border border-border shadow-2xl transition-transform duration-500 hover:scale-[1.02]">
+                <div className="group hero-media relative overflow-hidden rounded-[28px]">
+                  <div
+                    className="pointer-events-none absolute -inset-10 -z-10 rounded-[44px] bg-[radial-gradient(circle_at_40%_20%,rgba(59,130,246,0.35),rgba(34,211,238,0.18),transparent_62%)] blur-3xl"
+                    aria-hidden="true"
+                  />
+                  <div
+                    className="pointer-events-none absolute inset-0 -z-10 rounded-[28px] shadow-[0_48px_140px_-90px_rgba(59,130,246,0.75)]"
+                    aria-hidden="true"
+                  />
+
+                  <div
+                    className="pointer-events-none absolute inset-0 rounded-[28px] ring-1 ring-white/8"
+                    aria-hidden="true"
+                  />
+
+                  <div
+                    className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(255,255,255,0.10),transparent_55%)] opacity-80"
+                    aria-hidden="true"
+                  />
+
+                  <div
+                    className="pointer-events-none absolute inset-y-0 left-0 w-28 bg-gradient-to-r from-background via-background/35 to-transparent"
+                    aria-hidden="true"
+                  />
+
+                  <div
+                    className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-background/55 via-background/10 to-transparent"
+                    aria-hidden="true"
+                  />
+
                   <video
                     className="h-[440px] w-full object-cover"
                     src="/videos/hero.mp4"
