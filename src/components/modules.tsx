@@ -34,27 +34,63 @@ export function Modules() {
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {modules.map((item) => (
-            <div
-              key={item.title}
-              className="group rounded-2xl border border-border bg-card p-6 transition-all duration-200 hover:-translate-y-1 hover:border-primary/40 hover:bg-surface hover:shadow-[0_18px_60px_-25px_rgba(59,130,246,0.55)]"
-            >
-              <div className="flex items-start gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-border bg-background">
-                  <div className="h-4 w-4 rounded bg-primary/40" />
-                </div>
-                <div>
-                  <h3 className="text-base font-semibold text-foreground">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted">
-                    {item.description}
-                  </p>
+        <div className="relative mt-14">
+          <div
+            className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[520px] w-[820px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.18),rgba(34,211,238,0.10),transparent_60%)] blur-3xl"
+            aria-hidden="true"
+          />
+
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {modules.map((item) => (
+              <div
+                key={item.title}
+                className="group relative rounded-2xl p-[1px] transition-all duration-300 ease-out hover:-translate-y-[6px]"
+              >
+                <div
+                  className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/25 via-cyan-400/18 to-transparent opacity-25 blur-[0.4px] transition-opacity duration-300 ease-out group-hover:opacity-60"
+                  aria-hidden="true"
+                />
+                <div
+                  className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/22 via-cyan-400/14 to-transparent opacity-20 transition-opacity duration-300 ease-out group-hover:opacity-45"
+                  aria-hidden="true"
+                />
+
+                <div className="relative h-full rounded-2xl border border-border bg-card/90 p-6 backdrop-blur transition-all duration-300 ease-out group-hover:border-primary/40 group-hover:shadow-[0_26px_90px_-45px_rgba(59,130,246,0.55)]">
+                  <div
+                    className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-b from-white/5 to-transparent"
+                    aria-hidden="true"
+                  />
+                  <div
+                    className="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(circle_at_18%_12%,rgba(255,255,255,0.06),transparent_55%)] opacity-60"
+                    aria-hidden="true"
+                  />
+
+                  <div
+                    className="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-blue-400/0 via-cyan-400/45 to-transparent opacity-55"
+                    aria-hidden="true"
+                  />
+
+                  <div className="relative flex items-start gap-4">
+                    <div className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-border bg-primary/10">
+                      <div
+                        className="pointer-events-none absolute -inset-2 rounded-2xl bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.35),rgba(34,211,238,0.18),transparent_65%)] blur-lg opacity-70 transition-opacity duration-300 ease-out group-hover:opacity-90"
+                        aria-hidden="true"
+                      />
+                      <div className="relative h-4 w-4 rounded bg-primary/40" />
+                    </div>
+                    <div className="relative">
+                      <h3 className="text-base font-semibold text-foreground">
+                        {item.title}
+                      </h3>
+                      <p className="mt-2 text-sm leading-relaxed text-muted">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </Container>
     </section>
