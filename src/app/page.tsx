@@ -6,6 +6,7 @@ import { DemoProducts } from "@/components/demo-products";
 import { TechStack } from "@/components/tech-stack";
 import { Pricing } from "@/components/pricing";
 import { FinalCta } from "@/components/cta";
+import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <TechStack />
       <Pricing />
       <FinalCta />
+      <Contact />
       <Footer />
     </>
   );

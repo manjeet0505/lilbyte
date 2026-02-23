@@ -2,7 +2,7 @@ import { Container } from "@/components";
 
 export function FinalCta() {
   return (
-    <section className="py-24">
+    <section id="final-cta" className="py-24">
       <Container>
         <div className="rounded-2xl border border-border bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-cyan-500/20 p-12 text-center">
           <h2 className="font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">

@@ -2,7 +2,7 @@ import { Container } from "@/components";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden py-24">
+    <section id="home" className="relative overflow-hidden py-24">
       <div
         className="pointer-events-none absolute inset-0 -z-10"
         aria-hidden="true"
@@ -25,7 +25,7 @@ export function Hero() {
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <a
-                href="#start"
+                href="#contact"
                 className="inline-flex h-11 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
                 Start Your Product
