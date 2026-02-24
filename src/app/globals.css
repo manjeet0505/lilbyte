@@ -130,6 +130,17 @@ body::after {
   }
 }
 
+@keyframes hero-media-enter {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 14px, 0) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
 .reveal {
   --reveal-delay: 0ms;
   opacity: 0;
@@ -169,51 +180,145 @@ body::after {
 }
 
 .hero-media {
-  -webkit-mask-image: radial-gradient(
-    120% 120% at 40% 40%,
-    #000 60%,
-    rgba(0, 0, 0, 0.35) 74%,
-    transparent 92%
-  );
-  mask-image: radial-gradient(
-    120% 120% at 40% 40%,
-    #000 60%,
-    rgba(0, 0, 0, 0.35) 74%,
-    transparent 92%
-  );
-  will-change: transform, box-shadow;
-  animation: hero-media-drift 12s ease-in-out infinite;
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow:
+    0 34px 120px -80px rgba(0, 0, 0, 0.75),
+    0 48px 160px -120px rgba(59, 130, 246, 0.55);
+  will-change: transform, opacity, box-shadow;
   transition:
-    transform 600ms var(--ease-out-ui),
-    box-shadow 600ms var(--ease-out-ui),
-    filter 600ms var(--ease-out-ui);
+    transform 420ms var(--ease-out-ui),
+    box-shadow 420ms var(--ease-out-ui),
+    filter 420ms var(--ease-out-ui);
 }
 
-.hero-media::after {
+.hero-media-shell {
+  isolation: isolate;
+}
+
+.hero-media-shell::before {
   content: "";
   position: absolute;
-  inset: -1px;
+  inset: -44px;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: 48px;
+  background:
+    radial-gradient(
+      60% 55% at 25% 22%,
+      rgba(59, 130, 246, 0.26),
+      transparent 62%
+    ),
+    radial-gradient(
+      55% 60% at 70% 62%,
+      rgba(34, 211, 238, 0.16),
+      transparent 65%
+    );
+  filter: blur(26px);
+  opacity: 0.65;
+}
+
+.hero-media-shell::after {
+  content: "";
+  position: absolute;
+  inset: -16px;
+  z-index: 2;
+  pointer-events: none;
+  border-radius: 40px;
+  background: radial-gradient(
+    85% 75% at 18% 12%,
+    rgba(255, 255, 255, 0.12),
+    transparent 55%
+  );
+  opacity: 0.45;
+  mix-blend-mode: screen;
+}
+
+.hero-enter .hero-media.hero-item {
+  animation: hero-media-enter 560ms var(--ease-out-hero) both;
+  animation-delay: var(--enter-delay);
+}
+
+.hero-media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   pointer-events: none;
   border-radius: inherit;
   background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 32%),
     radial-gradient(
-      90% 80% at 22% 20%,
-      rgba(59, 130, 246, 0.18),
-      transparent 62%
-    ),
-    linear-gradient(
-      90deg,
-      rgba(5, 7, 14, 0.65),
-      rgba(5, 7, 14, 0.12) 40%,
-      transparent 75%
+      120% 90% at 20% 10%,
+      rgba(59, 130, 246, 0.14),
+      transparent 60%
     );
-  mix-blend-mode: screen;
-  opacity: 0.6;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 .hero-media:hover {
-  box-shadow: 0 60px 160px -110px rgba(59, 130, 246, 0.9);
-  filter: saturate(1.02) contrast(1.02);
+  transform: translate3d(0, -2px, 0) scale(1.01);
+  box-shadow:
+    0 38px 130px -86px rgba(0, 0, 0, 0.78),
+    0 52px 180px -128px rgba(59, 130, 246, 0.65);
+}
+
+.hero-media__topbar {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 14px;
+  background: linear-gradient(
+    180deg,
+    rgba(9, 12, 18, 0.82),
+    rgba(9, 12, 18, 0.24)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.hero-media__dots {
+  display: flex;
+  gap: 8px;
+}
+
+.hero-media__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 9999px;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.35);
+  opacity: 0.9;
+}
+
+.hero-media__dot--red {
+  background: rgba(248, 113, 113, 0.9);
+}
+
+.hero-media__dot--yellow {
+  background: rgba(251, 191, 36, 0.9);
+}
+
+.hero-media__dot--green {
+  background: rgba(74, 222, 128, 0.9);
+}
+
+.hero-media__pill {
+  margin-left: auto;
+  height: 12px;
+  width: 110px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.hero-media__video {
+  filter: brightness(1.06) contrast(1.06) saturate(1.02);
 }
 
 .motion-card {

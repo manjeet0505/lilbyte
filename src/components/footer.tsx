@@ -19,8 +19,17 @@ export function Footer() {
       <Container>
         <div className="grid gap-10 lg:grid-cols-2">
           <div>
-            <div className="font-display text-lg font-semibold text-foreground">
-              LilByte Tech Studio
+            <div className="flex items-center gap-2">
+              <img
+                src="/logo/lilbyte-logo.png"
+                alt="LilByte Tech Studio"
+                height={28}
+                className="h-7 w-auto"
+                loading="lazy"
+              />
+              <div className="font-display text-lg font-semibold text-foreground">
+                LilByte Tech Studio
+              </div>
             </div>
             <p className="mt-3 max-w-md text-sm leading-relaxed text-muted">
               We build AI-powered digital products for startups worldwide.

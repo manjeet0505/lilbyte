@@ -41,9 +41,15 @@ export function Navbar() {
         <div className="flex items-center gap-3">
           <a
             href="#"
-            className="font-display text-base font-semibold tracking-tight text-foreground"
+            className="group inline-flex items-center"
           >
-            LilByte
+            <img
+              src="/logo/lilbyte-logo.png"
+              alt="LilByte Tech Studio"
+              height={38}
+              className="mr-2 h-[38px] w-auto transition-[opacity,filter] duration-200 group-hover:opacity-90 group-hover:drop-shadow-[0_10px_28px_rgba(59,130,246,0.35)]"
+              loading="eager"
+            />
           </a>
         </div>
 
