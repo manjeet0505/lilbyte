@@ -1,17 +1,17 @@
+"use client";
+
 import { Container } from "@/components";
 
-export function Hero() {
-  return (
-    <section id="home" className="hero-enter relative overflow-hidden py-24">
-      <div
-        className="pointer-events-none absolute inset-0 -z-10"
-        aria-hidden="true"
-      >
-        <div className="hero-glow absolute left-1/2 top-[-240px] h-[520px] w-[820px] -translate-x-1/2 rounded-full bg-primary/20 blur-3xl" />
-        <div className="hero-glow absolute bottom-[-280px] right-[-200px] h-[520px] w-[520px] rounded-full bg-primary/10 blur-3xl" />
-        <div className="hero-glow absolute left-1/2 top-1/3 h-[620px] w-[980px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.18),rgba(34,211,238,0.10),transparent_60%)] blur-3xl" />
-      </div>
+import { useRef } from "react";
 
+export function Hero() {
+  const visualRef = useRef<HTMLDivElement | null>(null);
+
+  return (
+    <section
+      id="home"
+      className="hero-enter ambient-section ambient-hero relative overflow-hidden py-24"
+    >
       <Container>
         <div className="grid items-center gap-14 lg:grid-cols-2">
           <div className="flex flex-col items-start">
@@ -52,35 +52,40 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="relative" style={{ "--enter-delay": "440ms" } as never}>
-            <div className="relative h-[440px]">
-              <div className="relative mx-auto w-full max-w-xl">
-                <div
-                  className="pointer-events-none absolute inset-0 -z-10 rounded-[32px] bg-[radial-gradient(circle_at_35%_30%,rgba(59,130,246,0.28),rgba(34,211,238,0.14),transparent_62%)] blur-3xl"
-                  aria-hidden="true"
+          <div className="relative">
+            <div className="relative mx-auto w-full max-w-xl">
+              <div
+                ref={visualRef}
+                className="hero-item hero-illustration"
+                style={{ "--enter-delay": "440ms" } as never}
+                onMouseMove={(e) => {
+                  const el = visualRef.current;
+                  if (!el) return;
+
+                  const rect = el.getBoundingClientRect();
+                  const px = (e.clientX - rect.left) / rect.width;
+                  const py = (e.clientY - rect.top) / rect.height;
+
+                  const tiltX = (0.5 - py) * 5;
+                  const tiltY = (px - 0.5) * 7;
+
+                  el.style.setProperty("--tilt-x", `${tiltX.toFixed(2)}deg`);
+                  el.style.setProperty("--tilt-y", `${tiltY.toFixed(2)}deg`);
+                }}
+                onMouseLeave={() => {
+                  const el = visualRef.current;
+                  if (!el) return;
+                  el.style.setProperty("--tilt-x", "0deg");
+                  el.style.setProperty("--tilt-y", "0deg");
+                }}
+              >
+                <div className="hero-illustration__glow" aria-hidden="true" />
+                <img
+                  src="/hero/ai-illustration.png"
+                  alt="AI product illustration"
+                  className="hero-illustration__img"
+                  loading="eager"
                 />
-
-                <div className="hero-item hero-media-shell relative">
-                  <div className="group hero-media relative overflow-hidden rounded-[28px]">
-                    <div className="hero-media__topbar" aria-hidden="true">
-                      <div className="hero-media__dots">
-                        <span className="hero-media__dot hero-media__dot--red" />
-                        <span className="hero-media__dot hero-media__dot--yellow" />
-                        <span className="hero-media__dot hero-media__dot--green" />
-                      </div>
-                      <div className="hero-media__pill" />
-                    </div>
-
-                    <video
-                      className="hero-media__video h-[440px] w-full object-cover"
-                      src="/videos/hero.mp4"
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                    />
-                  </div>
-                </div>
               </div>
             </div>
           </div>

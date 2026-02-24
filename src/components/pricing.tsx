@@ -43,7 +43,7 @@ export function Pricing() {
   return (
     <section id="pricing" className="py-24">
       <Container>
-        <Reveal className="mx-auto max-w-2xl text-center">
+        <Reveal className="mx-auto max-w-2xl text-center" staggerChildren>
           <h2 className="font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
             Product Build Packages
           </h2>

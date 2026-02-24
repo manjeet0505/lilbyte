@@ -7,6 +7,7 @@ type RevealProps = {
   className?: string;
   delayMs?: number;
   once?: boolean;
+  staggerChildren?: boolean;
 };
 
 export function Reveal({
@@ -14,6 +15,7 @@ export function Reveal({
   className,
   delayMs = 0,
   once = true,
+  staggerChildren = false,
 }: RevealProps) {
   const ref = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
@@ -47,6 +49,7 @@ export function Reveal({
       className={["reveal", visible ? "is-visible" : "", className]
         .filter(Boolean)
         .join(" ")}
+      data-stagger={staggerChildren ? "true" : undefined}
       style={{
         ...(delayMs ? ({ "--reveal-delay": `${delayMs}ms` } as never) : {}),
       }}

@@ -39,9 +39,14 @@ const previewImages: Record<(typeof products)[number]["name"], string> = {
 
 export function DemoProducts() {
   return (
-    <section className="py-24">
+    <section className="ambient-section ambient-demo py-24">
+      <div className="ambient-layer ambient-layer--demo" aria-hidden="true">
+        <span className="ambient-demo-texture" />
+        <span className="ambient-demo-scan" />
+        <span className="ambient-demo-grid" />
+      </div>
       <Container>
-        <Reveal className="mx-auto max-w-2xl text-center">
+        <Reveal className="mx-auto max-w-2xl text-center" staggerChildren>
           <h2 className="font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
             Demo Products
           </h2>

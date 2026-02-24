@@ -28,7 +28,7 @@ export function Workflow() {
   return (
     <section id="workflow" className="py-24">
       <Container>
-        <Reveal className="mx-auto max-w-2xl text-center">
+        <Reveal className="mx-auto max-w-2xl text-center" staggerChildren>
           <h2 className="font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
             How We Build Products
           </h2>

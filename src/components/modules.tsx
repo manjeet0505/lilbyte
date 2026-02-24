@@ -24,9 +24,17 @@ const modules = [
 
 export function Modules() {
   return (
-    <section id="products" className="py-24">
+    <section id="products" className="ambient-section ambient-modules py-24">
+      <div className="ambient-layer ambient-layer--modules" aria-hidden="true">
+        <span className="ambient-panel ambient-panel--a" />
+        <span className="ambient-panel ambient-panel--b" />
+        <span className="ambient-panel ambient-panel--c" />
+        <span className="ambient-node ambient-node--a" />
+        <span className="ambient-node ambient-node--b" />
+        <span className="ambient-node ambient-node--c" />
+      </div>
       <Container>
-        <Reveal className="mx-auto max-w-2xl text-center">
+        <Reveal className="mx-auto max-w-2xl text-center" staggerChildren>
           <h2 className="font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
             What We Build
           </h2>

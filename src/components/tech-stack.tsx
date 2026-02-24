@@ -241,7 +241,11 @@ function MarqueeRow({ reverse }: { reverse?: boolean }) {
 
 export function TechStack() {
   return (
-    <section className="py-16">
+    <section className="ambient-section ambient-tech py-16">
+      <div className="ambient-layer ambient-layer--tech" aria-hidden="true">
+        <span className="ambient-tech-grid" />
+        <span className="ambient-tech-pulse" />
+      </div>
       <Container>
         <Reveal className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">

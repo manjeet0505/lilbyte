@@ -28,7 +28,12 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24">
+    <section id="contact" className="ambient-section ambient-contact py-24">
+      <div className="ambient-layer ambient-layer--contact" aria-hidden="true">
+        <span className="ambient-contact-mesh" />
+        <span className="ambient-contact-sweep" />
+        <span className="ambient-contact-lines" />
+      </div>
       <Container>
         <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
           <div>
