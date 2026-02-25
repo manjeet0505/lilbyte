@@ -37,20 +37,24 @@ export function Navbar() {
   }, [isOpen]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/70">
+    <header className="sticky top-0 z-50 bg-gradient-to-b from-[rgba(5,7,14,0.85)] via-[rgba(5,7,14,0.75)] to-transparent backdrop-blur-md supports-[backdrop-filter]:bg-gradient-to-b supports-[backdrop-filter]:from-[rgba(5,7,14,0.8)] supports-[backdrop-filter]:via-[rgba(5,7,14,0.7)] supports-[backdrop-filter]:to-transparent transition-all duration-300 ease-out">
+      <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" aria-hidden="true" />
       <Container className="flex h-16 items-center justify-between">
         <div className="flex items-center gap-3">
           <a
             href="#"
             className="group inline-flex items-center"
           >
-            <img
-              src="/logo/lilbyte-logo.png"
-              alt="LilByte Tech Studio"
-              height={38}
-              className="mr-2 h-[38px] w-auto transition-[opacity,filter] duration-200 group-hover:opacity-90 group-hover:drop-shadow-[0_10px_28px_rgba(59,130,246,0.35)]"
-              loading="eager"
-            />
+            <div className="relative">
+              <div className="absolute -inset-2 bg-gradient-to-r from-blue-500/10 via-transparent to-cyan-500/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100 blur-xl" aria-hidden="true" />
+              <img
+                src="/logo/lilbyte-logo.png"
+                alt="LilByte Tech Studio"
+                height={38}
+                className="relative h-[38px] w-auto transition-all duration-300 group-hover:scale-105 group-hover:brightness-110"
+                loading="eager"
+              />
+            </div>
           </a>
         </div>
 
@@ -59,17 +63,19 @@ export function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-muted transition-colors hover:text-foreground"
+              className="relative text-sm font-medium text-muted transition-all duration-200 hover:text-foreground hover:text-blue-400 group"
             >
-              {link.label}
+              <span className="relative z-10">{link.label}</span>
+              <span className="absolute bottom-0 left-0 h-px w-0 bg-gradient-to-r from-blue-400 to-cyan-400 transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
 
           <a
             href="#contact"
-            className="inline-flex h-10 items-center justify-center rounded-full bg-primary px-4 text-sm font-semibold text-primary-foreground transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            className="group relative inline-flex h-10 items-center justify-center rounded-full bg-gradient-to-r from-primary to-primary/90 px-4 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
-            Book a Call
+            <span className="relative z-10">Book a Call</span>
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 blur-md" aria-hidden="true" />
           </a>
         </nav>
 

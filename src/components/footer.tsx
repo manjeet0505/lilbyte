@@ -33,7 +33,7 @@ export function Footer() {
                 href="mailto:hello@lilbyte.tech"
                 className="text-sm font-medium text-muted transition-colors hover:text-foreground"
               >
-                hello@lilbyte.tech
+                lilbyteorg@gmail.com
               </a>
             </div>
             <div className="flex items-center gap-3">
@@ -81,25 +81,25 @@ export function Footer() {
             <div className="font-semibold text-foreground">Product & Services</div>
             <Link
               href="/#products"
-              className="block text-muted transition-colors hover:text-foreground"
+              className="block text-muted transition-all duration-200 hover:text-foreground hover:underline hover:underline-offset-4 hover:decoration-primary/60"
             >
               Startup Websites
             </Link>
             <Link
               href="/#products"
-              className="block text-muted transition-colors hover:text-foreground"
+              className="block text-muted transition-all duration-200 hover:text-foreground hover:underline hover:underline-offset-4 hover:decoration-primary/60"
             >
               SaaS Platforms
             </Link>
             <Link
               href="/#products"
-              className="block text-muted transition-colors hover:text-foreground"
+              className="block text-muted transition-all duration-200 hover:text-foreground hover:underline hover:underline-offset-4 hover:decoration-primary/60"
             >
               AI Automation
             </Link>
             <Link
               href="/#products"
-              className="block text-muted transition-colors hover:text-foreground"
+              className="block text-muted transition-all duration-200 hover:text-foreground hover:underline hover:underline-offset-4 hover:decoration-primary/60"
             >
               MVP Development
             </Link>
@@ -110,25 +110,25 @@ export function Footer() {
             <div className="font-semibold text-foreground">Company</div>
             <Link
               href="/about"
-              className="block text-muted transition-colors hover:text-foreground"
+              className="block text-muted transition-all duration-200 hover:text-foreground hover:underline hover:underline-offset-4 hover:decoration-primary/60"
             >
               About
             </Link>
             <Link
               href="/team"
-              className="block text-muted transition-colors hover:text-foreground"
+              className="block text-muted transition-all duration-200 hover:text-foreground hover:underline hover:underline-offset-4 hover:decoration-primary/60"
             >
               Team
             </Link>
             <Link
-              href="/workflow"
-              className="block text-muted transition-colors hover:text-foreground"
+              href="/faq"
+              className="block text-muted transition-all duration-200 hover:text-foreground hover:underline hover:underline-offset-4 hover:decoration-primary/60"
             >
-              Workflow
+              FAQ
             </Link>
             <Link
               href="/contact"
-              className="block text-muted transition-colors hover:text-foreground"
+              className="block text-muted transition-all duration-200 hover:text-foreground hover:underline hover:underline-offset-4 hover:decoration-primary/60"
             >
               Contact
             </Link>
@@ -139,19 +139,19 @@ export function Footer() {
             <div className="font-semibold text-foreground">Resources</div>
             <Link
               href="/faq"
-              className="block text-muted transition-colors hover:text-foreground"
+              className="block text-muted transition-all duration-200 hover:text-foreground hover:underline hover:underline-offset-4 hover:decoration-primary/60"
             >
               FAQ
             </Link>
             <Link
               href="/terms"
-              className="block text-muted transition-colors hover:text-foreground"
+              className="block text-muted transition-all duration-200 hover:text-foreground hover:underline hover:underline-offset-4 hover:decoration-primary/60"
             >
               Terms &amp; Conditions
             </Link>
             <Link
               href="/privacy"
-              className="block text-muted transition-colors hover:text-foreground"
+              className="block text-muted transition-all duration-200 hover:text-foreground hover:underline hover:underline-offset-4 hover:decoration-primary/60"
             >
               Privacy Policy
             </Link>
