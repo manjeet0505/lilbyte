@@ -37,7 +37,7 @@ export function Contact() {
       <Container>
         <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
           <div>
-            <Reveal>
+            <Reveal staggerChildren>
               <h2 className="font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
                 Let’s Talk About Your Product
               </h2>
@@ -46,108 +46,110 @@ export function Contact() {
               </p>
             </Reveal>
 
-            <form
-              className="mt-8 space-y-5"
-              aria-describedby={formId}
-              onSubmit={(e) => e.preventDefault()}
-            >
-              <div>
-                <label
-                  htmlFor={`${formId}-name`}
-                  className="mb-2 block text-sm font-medium text-foreground"
-                >
-                  Name
-                </label>
-                <input
-                  id={`${formId}-name`}
-                  name="name"
-                  type="text"
-                  autoComplete="name"
-                  className={inputClassName}
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  placeholder="Your name"
-                  required
-                />
-              </div>
+            <Reveal className="mt-8" delayMs={140}>
+              <form
+                className="space-y-5"
+                aria-describedby={formId}
+                onSubmit={(e) => e.preventDefault()}
+              >
+                <div>
+                  <label
+                    htmlFor={`${formId}-name`}
+                    className="mb-2 block text-sm font-medium text-foreground"
+                  >
+                    Name
+                  </label>
+                  <input
+                    id={`${formId}-name`}
+                    name="name"
+                    type="text"
+                    autoComplete="name"
+                    className={inputClassName}
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    placeholder="Your name"
+                    required
+                  />
+                </div>
 
-              <div>
-                <label
-                  htmlFor={`${formId}-email`}
-                  className="mb-2 block text-sm font-medium text-foreground"
-                >
-                  Email
-                </label>
-                <input
-                  id={`${formId}-email`}
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  className={inputClassName}
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="you@company.com"
-                  required
-                />
-              </div>
+                <div>
+                  <label
+                    htmlFor={`${formId}-email`}
+                    className="mb-2 block text-sm font-medium text-foreground"
+                  >
+                    Email
+                  </label>
+                  <input
+                    id={`${formId}-email`}
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                    className={inputClassName}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="you@company.com"
+                    required
+                  />
+                </div>
 
-              <div>
-                <label
-                  htmlFor={`${formId}-projectType`}
-                  className="mb-2 block text-sm font-medium text-foreground"
-                >
-                  Project Type
-                </label>
-                <select
-                  id={`${formId}-projectType`}
-                  name="projectType"
-                  className={inputClassName}
-                  value={projectType}
-                  onChange={(e) => setProjectType(e.target.value as ProjectType)}
-                >
-                  <option value="Website">Website</option>
-                  <option value="SaaS Product">SaaS Product</option>
-                  <option value="Mobile App">Mobile App</option>
-                  <option value="AI Integration">AI Integration</option>
-                </select>
-              </div>
+                <div>
+                  <label
+                    htmlFor={`${formId}-projectType`}
+                    className="mb-2 block text-sm font-medium text-foreground"
+                  >
+                    Project Type
+                  </label>
+                  <select
+                    id={`${formId}-projectType`}
+                    name="projectType"
+                    className={inputClassName}
+                    value={projectType}
+                    onChange={(e) => setProjectType(e.target.value as ProjectType)}
+                  >
+                    <option value="Website">Website</option>
+                    <option value="SaaS Product">SaaS Product</option>
+                    <option value="Mobile App">Mobile App</option>
+                    <option value="AI Integration">AI Integration</option>
+                  </select>
+                </div>
 
-              <div>
-                <label
-                  htmlFor={`${formId}-message`}
-                  className="mb-2 block text-sm font-medium text-foreground"
-                >
-                  Message
-                </label>
-                <textarea
-                  id={`${formId}-message`}
-                  name="message"
-                  className={inputClassName}
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  placeholder="Tell us what you want to build..."
-                  rows={6}
-                  required
-                />
-              </div>
+                <div>
+                  <label
+                    htmlFor={`${formId}-message`}
+                    className="mb-2 block text-sm font-medium text-foreground"
+                  >
+                    Message
+                  </label>
+                  <textarea
+                    id={`${formId}-message`}
+                    name="message"
+                    className={inputClassName}
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    placeholder="Tell us what you want to build..."
+                    rows={6}
+                    required
+                  />
+                </div>
 
-              <div className="pt-2">
-                <button
-                  type="submit"
-                  className="motion-button inline-flex h-11 w-full items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:w-auto"
-                >
-                  Send Message
-                </button>
+                <div className="pt-2">
+                  <button
+                    type="submit"
+                    className="motion-button inline-flex h-11 w-full items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:w-auto"
+                  >
+                    Send Message
+                  </button>
 
-                <p id={formId} className="mt-3 text-xs text-muted">
-                  By submitting this form, you agree to be contacted by email.
-                </p>
-              </div>
-            </form>
+                  <p id={formId} className="mt-3 text-xs text-muted">
+                    By submitting this form, you agree to be contacted by email.
+                  </p>
+                </div>
+              </form>
+            </Reveal>
           </div>
 
           <div>
-            <Reveal delayMs={120}>
+            <Reveal delayMs={120} staggerChildren>
               <h3 className="text-lg font-semibold text-foreground">
                 Or Book a Call Instantly
               </h3>
@@ -158,7 +160,7 @@ export function Contact() {
               </p>
             </Reveal>
 
-            <div className="mt-6">
+            <Reveal className="mt-6" delayMs={220} staggerChildren>
               <button
                 type="button"
                 onClick={openCalendly}
@@ -170,7 +172,7 @@ export function Contact() {
               <p className="mt-3 text-xs text-muted">
                 If the popup doesn’t open, please refresh once and try again.
               </p>
-            </div>
+            </Reveal>
           </div>
         </div>
       </Container>

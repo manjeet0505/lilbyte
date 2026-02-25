@@ -213,7 +213,7 @@ function MarqueeRow({ reverse }: { reverse?: boolean }) {
       <div
         className={`marquee-track flex items-center gap-3 sm:gap-4 ${
           reverse ? "[animation-direction:reverse]" : ""
-        } group-hover:[animation-play-state:paused]`}
+        } group-hover:[animation-play-state:paused] hover:[animation-play-state:paused]`}
       >
         {items.map((name, idx) => (
           <div
