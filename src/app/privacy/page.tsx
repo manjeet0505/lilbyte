@@ -18,6 +18,14 @@ export default function PrivacyPage() {
                 How we handle data and protect the privacy of founders, teams, and users.
               </p>
             </Reveal>
+
+            <div className="mt-10 mx-auto max-w-3xl rounded-2xl border border-border bg-card/90 p-8 text-sm leading-relaxed text-muted backdrop-blur-sm sm:p-10">
+              <div className="space-y-6">
+                <p>
+                  How we handle data and protect the privacy of founders, teams, and users.
+                </p>
+              </div>
+            </div>
           </Container>
         </section>
       </main>

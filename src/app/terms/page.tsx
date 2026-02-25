@@ -18,6 +18,14 @@ export default function TermsPage() {
                 High-level legal information about working with LilByte Tech Studio.
               </p>
             </Reveal>
+
+            <div className="mt-10 mx-auto max-w-3xl rounded-2xl border border-border bg-card/90 p-8 text-sm leading-relaxed text-muted backdrop-blur-sm sm:p-10">
+              <div className="space-y-6">
+                <p>
+                  High-level legal information about working with LilByte Tech Studio.
+                </p>
+              </div>
+            </div>
           </Container>
         </section>
       </main>
