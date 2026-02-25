@@ -30,7 +30,7 @@ export function Footer() {
             </p>
             <div className="flex flex-wrap items-center gap-3">
               <a
-                href="mailto:hello@lilbyte.tech"
+                href="mailto:lilbyteorg@gmail.com"
                 className="text-sm font-medium text-muted transition-colors hover:text-foreground"
               >
                 lilbyteorg@gmail.com
@@ -62,7 +62,7 @@ export function Footer() {
                 </svg>
               </a>
               <a
-                href="mailto:hello@lilbyte.tech"
+                href="mailto:lilbyteorg@gmail.com"
                 aria-label="Email LilByte"
                 className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background/60 text-muted transition-colors hover:border-primary hover:text-foreground"
               >

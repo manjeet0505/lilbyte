@@ -37,28 +37,28 @@ export function Navbar() {
   }, [isOpen]);
 
   return (
-    <header className="sticky top-0 z-50 bg-gradient-to-b from-[rgba(5,7,14,0.85)] via-[rgba(5,7,14,0.75)] to-transparent backdrop-blur-md supports-[backdrop-filter]:bg-gradient-to-b supports-[backdrop-filter]:from-[rgba(5,7,14,0.8)] supports-[backdrop-filter]:via-[rgba(5,7,14,0.7)] supports-[backdrop-filter]:to-transparent transition-all duration-300 ease-out">
-      <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" aria-hidden="true" />
-      <Container className="flex h-16 items-center justify-between">
-        <div className="flex items-center gap-3">
+    <header className="sticky top-0 z-50" style={{background: 'linear-gradient(to bottom, rgba(5,12,24,0.85), rgba(5,12,24,0.35))', backdropFilter: 'blur(10px)', borderBottom: '1px solid rgba(120,160,255,0.15)', height: '72px', position: 'sticky', top: '0', zIndex: '50'}}>
+      <div style={{maxWidth: '1200px', margin: '0 auto', padding: '0 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '100%'}}>
+        <div style={{display: 'flex', alignItems: 'center', flexShrink: '0'}}>
           <a
             href="#"
             className="group inline-flex items-center"
           >
-            <div className="relative">
+            <div className="relative" style={{display: 'flex', alignItems: 'center', flexShrink: '0'}}>
               <div className="absolute -inset-2 bg-gradient-to-r from-blue-500/10 via-transparent to-cyan-500/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100 blur-xl" aria-hidden="true" />
               <img
                 src="/logo/lilbyte-logo.png"
                 alt="LilByte Tech Studio"
-                height={38}
-                className="relative h-[38px] w-auto transition-all duration-300 group-hover:scale-105 group-hover:brightness-110"
+                height={42}
+                className="relative transition-transform duration-250 ease-out group-hover:scale-105"
+                style={{filter: 'drop-shadow(0 0 12px rgba(80,120,255,0.35))', height: '42px', width: 'auto', objectFit: 'contain'}}
                 loading="eager"
               />
             </div>
           </a>
         </div>
 
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-8 md:flex" aria-label="Primary" style={{display: 'flex', gap: '28px', alignItems: 'center', whiteSpace: 'nowrap'}}>
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -73,6 +73,7 @@ export function Navbar() {
           <a
             href="#contact"
             className="group relative inline-flex h-10 items-center justify-center rounded-full bg-gradient-to-r from-primary to-primary/90 px-4 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            style={{flexShrink: '0'}}
           >
             <span className="relative z-10">Book a Call</span>
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 blur-md" aria-hidden="true" />
@@ -89,7 +90,7 @@ export function Navbar() {
         >
           {isOpen ? <CloseIcon /> : <MenuIcon />}
         </button>
-      </Container>
+      </div>
 
       {isOpen ? (
         <div className="md:hidden">

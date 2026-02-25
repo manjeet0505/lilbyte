@@ -93,7 +93,7 @@ export const teamMembers: TeamMember[] = [
     ],
     linkedin: "https://www.linkedin.com",
     github: "https://github.com",
-    email: "hello@lilbyte.tech",
+    email: "lilbyteorg@gmail.com",
     bio: "Manjeet leads product engineering at LilByte Tech Studio. He specializes in full-stack web development and building AI-powered systems including automation tools, SaaS platforms, and scalable digital products. He focuses on turning ideas into production-ready solutions with strong architecture and performance.",
     whatTheyBuild: [
       "End-to-end SaaS products and dashboards",

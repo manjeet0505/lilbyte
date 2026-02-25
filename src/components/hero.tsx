@@ -10,7 +10,8 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="hero-enter ambient-section ambient-hero relative overflow-hidden py-24"
+      className="hero-enter ambient-section ambient-hero relative overflow-hidden"
+      style={{paddingTop: '120px'}}
     >
       <Container>
         <div className="grid items-center gap-14 lg:grid-cols-2">

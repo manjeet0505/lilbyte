@@ -27,11 +27,11 @@ export default function PrivacyPage() {
     },
     {
       title: "User Rights",
-      content: "You have the right to access, update, or delete your personal information. You can request data export or opt-out of communications at any time. To exercise these rights, contact us at hello@lilbyte.tech. We respond to all privacy requests within 30 days."
+      content: "You have the right to access, update, or delete your personal information. You can request data export or opt-out of communications at any time. To exercise these rights, contact us at lilbyteorg@gmail.com. We respond to all privacy requests within 30 days."
     },
     {
       title: "Contact Information",
-      content: "For privacy-related questions or concerns, contact our Data Protection Officer at hello@lilbyte.tech. We are committed to addressing privacy issues promptly and transparently. Our privacy practices are regularly reviewed and updated to ensure compliance."
+      content: "For privacy-related questions or concerns, contact our Data Protection Officer at lilbyteorg@gmail.com. We are committed to addressing privacy issues promptly and transparently. Our privacy practices are regularly reviewed and updated to ensure compliance."
     }
   ];
 
