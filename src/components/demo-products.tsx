@@ -58,9 +58,9 @@ export function DemoProducts() {
         <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {products.map((p, index) => (
             <Reveal key={p.name} delayMs={120 + index * 90}>
-              <div className="motion-card group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card hover:border-primary/40 [--motion-card-shadow:0_20px_70px_-28px_rgba(59,130,246,0.6)]">
+              <div className="motion-card group flex h-full flex-col rounded-2xl border border-border bg-card hover:border-primary/40 [--motion-card-shadow:0_20px_70px_-28px_rgba(59,130,246,0.6)]">
                 <div className="border-b border-border bg-background">
-                  <div className="relative h-[220px] overflow-hidden rounded-t-2xl bg-[linear-gradient(180deg,rgb(10,12,18),rgb(6,8,12))]">
+                  <div className="relative h-[220px] rounded-t-2xl bg-[linear-gradient(180deg,rgb(10,12,18),rgb(6,8,12))]">
                     <div className="flex h-9 items-center gap-2 border-b border-border bg-[linear-gradient(180deg,rgb(14,16,22),rgb(10,12,18))] px-3">
                       <div className="flex items-center gap-2">
                         <div className="h-2.5 w-2.5 rounded-full bg-rose-400" />
@@ -71,7 +71,7 @@ export function DemoProducts() {
                     </div>
 
                     <div className="relative h-[calc(220px-36px)] p-2">
-                      <div className="relative h-full overflow-hidden rounded-xl border border-border/70 bg-[linear-gradient(180deg,rgb(15,18,26),rgb(8,10,14))] shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
+                      <div className="relative h-full rounded-xl border border-border/70 bg-[linear-gradient(180deg,rgb(15,18,26),rgb(8,10,14))] shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
                         <img
                           src={previewImages[p.name]}
                           alt={p.name}

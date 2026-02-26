@@ -7,7 +7,6 @@ import { TechStack } from "@/components/tech-stack";
 import { Pricing } from "@/components/pricing";
 import { FinalCta } from "@/components/cta";
 import { Contact } from "@/components/contact";
-import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (
@@ -21,7 +20,6 @@ export default function Home() {
       <Pricing />
       <FinalCta />
       <Contact />
-      <Footer />
     </>
   );
 }

@@ -52,14 +52,14 @@ export function Pricing() {
           </p>
         </Reveal>
 
-        <div className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-3">
+        <div className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-3 overflow-hidden">
           {tiers.map((tier) => (
             <Reveal key={tier.name} delayMs={140 + (tier.highlighted ? 90 : 0)}>
               <div
                 className={
                   tier.highlighted
-                    ? "motion-card relative rounded-2xl border border-primary bg-card p-8 shadow-2xl [--motion-card-shadow:0_22px_80px_-30px_rgba(59,130,246,0.65)]"
-                    : "motion-card rounded-2xl border border-border bg-card p-8 hover:border-primary/40 [--motion-card-shadow:0_18px_60px_-25px_rgba(59,130,246,0.55)]"
+                    ? "motion-card relative rounded-2xl p-8 shadow-2xl [--motion-card-shadow:0_22px_80px_-30px_rgba(59,130,246,0.65)]"
+                    : "motion-card relative rounded-2xl p-8 [--motion-card-shadow:0_18px_60px_-25px_rgba(59,130,246,0.55)]"
                 }
               >
                 {tier.highlighted ? (

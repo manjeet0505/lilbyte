@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter, Sora } from "next/font/google";
+import Link from "next/link";
 import Script from "next/script";
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
 import "./globals.css";
 
 const inter = Inter({
@@ -44,13 +47,17 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
       </head>
       <body
-        className={`${inter.variable} ${sora.variable} antialiased`}
+        className={`${inter.variable} ${sora.variable} antialiased overflow-x-hidden`}
       >
         <Script
           src="https://assets.calendly.com/assets/external/widget.js"
           strategy="afterInteractive"
         />
-        {children}
+        <Navbar />
+        <main className="min-h-screen overflow-x-hidden">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );

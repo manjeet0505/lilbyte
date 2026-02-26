@@ -2,18 +2,18 @@ export type TeamMember = {
   name: string;
   role: string;
   photo: string;
-  photoFile?: string;
+  photoFile: string;
   intro: string;
   skills: string[];
-  linkedin?: string;
-  github?: string;
-  email?: string;
+  linkedin: string;
+  github: string;
+  email: string;
   bio: string;
-  tools: string[];
-  funLine: string;
-  slug: string;
-  highlights: string[];
   whatTheyBuild: string[];
+  tools: string[];
+  highlights: string[];
+  slug: string;
+  funLine?: string;
 };
 
 function svgAvatarDataUri({
@@ -75,14 +75,14 @@ function svgAvatarDataUri({
 export const teamMembers: TeamMember[] = [
   {
     name: "Manjeet Kumar Mishra",
-    role: "Founder & Full Stack / AI Engineer",
+    role: "Founder & CEO",
     photo: svgAvatarDataUri({
       name: "Manjeet Kumar Mishra",
-      role: "Full Stack / AI",
+      role: "Founder & CEO",
     }),
     photoFile: "/team/manjeet.jpg",
     intro:
-      "Leads product engineering and builds AI-powered systems, from SaaS platforms to automation tools.",
+      "Manjeet leads product engineering and builds AI-powered systems, from SaaS platforms to automation tools. He specializes in full-stack web development and building AI-powered systems including automation tools, SaaS platforms, and scalable digital products. He focuses on turning ideas into production-ready solutions with strong architecture and performance.",
     skills: [
       "Full Stack",
       "React",
@@ -91,7 +91,7 @@ export const teamMembers: TeamMember[] = [
       "SaaS Architecture",
       "System Design",
     ],
-    linkedin: "https://www.linkedin.com",
+    linkedin: "https://www.linkedin.com/in/manjeet-mishra-175705260/",
     github: "https://github.com",
     email: "lilbyteorg@gmail.com",
     bio: "Manjeet leads product engineering at LilByte Tech Studio. He specializes in full-stack web development and building AI-powered systems including automation tools, SaaS platforms, and scalable digital products. He focuses on turning ideas into production-ready solutions with strong architecture and performance.",
@@ -106,7 +106,6 @@ export const teamMembers: TeamMember[] = [
       "Ships from prototype to production with observability and stability.",
       "Designs architectures that stay maintainable as products grow.",
     ],
-    funLine: "Loves turning messy product ideas into clean, shippable systems.",
     slug: "manjeet-kumar-mishra",
   },
   {
@@ -126,9 +125,9 @@ export const teamMembers: TeamMember[] = [
       "UX Thinking",
       "Client Strategy",
     ],
-    linkedin: "https://www.linkedin.com",
+    linkedin: "https://www.linkedin.com/in/muskan-chauhan/",
     github: "https://github.com",
-    email: "team@lilbyte.tech",
+    email: "lilbyteorg@gmail.com",
     bio: "Muskan works across product development and analytics at LilByte. She combines strong web development skills with data analysis and user insight generation. She also plays a key role in communication, client interaction, and shaping product direction with a user-focused mindset.",
     whatTheyBuild: [
       "Web experiences informed by analytics and user signals",
@@ -161,7 +160,7 @@ export const teamMembers: TeamMember[] = [
       "Business Insights",
       "Visualization",
     ],
-    linkedin: "https://www.linkedin.com",
+    linkedin: "https://www.linkedin.com/in/mayankyaduvnsi/",
     github: "https://github.com",
     email: "data@lilbyte.tech",
     bio: "Mayank leads the analytics direction at LilByte. He focuses on extracting meaningful insights from data, building dashboards, and supporting AI systems with structured datasets and analysis pipelines that drive smarter product decisions.",
@@ -196,7 +195,7 @@ export const teamMembers: TeamMember[] = [
       "Deployment",
       "Backend Systems",
     ],
-    linkedin: "https://www.linkedin.com",
+    linkedin: "https://www.linkedin.com/in/manisha-dev/",
     github: "https://github.com",
     email: "engineering@lilbyte.tech",
     bio: "Manisha works on mobile and cloud-based systems at LilByte. She specializes in application development, secure cloud deployment, and integrating data science workflows into real products to ensure scalability and reliability.",

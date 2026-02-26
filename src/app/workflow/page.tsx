@@ -1,12 +1,9 @@
 import { Container } from "@/components";
-import { Footer } from "@/components/footer";
-import { Navbar } from "@/components/navbar";
 import { Workflow } from "@/components/workflow";
 
 export default function WorkflowPage() {
   return (
     <>
-      <Navbar />
       <main>
         <section className="py-24">
           <Container>
@@ -14,7 +11,6 @@ export default function WorkflowPage() {
           </Container>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

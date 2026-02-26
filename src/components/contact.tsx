@@ -14,6 +14,8 @@ export function Contact() {
   const [email, setEmail] = useState("");
   const [projectType, setProjectType] = useState<ProjectType>("Website");
   const [message, setMessage] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
 
   const inputClassName =
     "w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background";
@@ -25,6 +27,47 @@ export function Contact() {
     if (!calendly?.initPopupWidget) return;
 
     calendly.initPopupWidget({ url: "https://calendly.com/mishramanjeet26/30min" });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+
+    try {
+      const formData = {
+        name,
+        email,
+        projectType,
+        message,
+      };
+
+      // Send email using our API route
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+      
+      // Reset form
+      setName("");
+      setEmail("");
+      setProjectType("Website");
+      setMessage("");
+      setSubmitStatus("success");
+      
+    } catch (error) {
+      setSubmitStatus("error");
+      console.error("Form submission error:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -50,7 +93,7 @@ export function Contact() {
               <form
                 className="space-y-5"
                 aria-describedby={formId}
-                onSubmit={(e) => e.preventDefault()}
+                onSubmit={handleSubmit}
               >
                 <div>
                   <label
@@ -135,10 +178,23 @@ export function Contact() {
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="motion-button inline-flex h-11 w-full items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:w-auto"
+                    disabled={isSubmitting}
+                    className="motion-button inline-flex h-11 w-full items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Send Message
+                    {isSubmitting ? "Sending..." : "Send Message"}
                   </button>
+
+                  {submitStatus === "success" && (
+                    <p className="mt-3 text-sm text-green-600 dark:text-green-400">
+                      Thank you for contacting us! We'll get back to you within 24 hours.
+                    </p>
+                  )}
+                  
+                  {submitStatus === "error" && (
+                    <p className="mt-3 text-sm text-red-600 dark:text-red-400">
+                      Something went wrong. Please try again or email us directly at lilbyteorg@gmail.com
+                    </p>
+                  )}
 
                   <p id={formId} className="mt-3 text-xs text-muted">
                     By submitting this form, you agree to be contacted by email.

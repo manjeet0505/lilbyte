@@ -3,10 +3,10 @@ import { Reveal } from "@/components/shared";
 
 export function FinalCta() {
   return (
-    <section id="final-cta" className="py-24">
+    <section id="final-cta" className="py-24 overflow-hidden">
       <Container>
         <Reveal
-          className="relative rounded-2xl border border-border bg-gradient-to-r from-blue-500/20 via-sky-500/20 to-cyan-400/20 p-12 text-center"
+          className="relative rounded-2xl p-12 text-center overflow-hidden"
           staggerChildren
         >
           <div

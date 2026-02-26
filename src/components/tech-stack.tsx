@@ -257,13 +257,13 @@ export function TechStack() {
           </p>
         </Reveal>
 
-        <Reveal className="relative mt-10">
+        <Reveal className="relative mt-10 overflow-hidden">
           <div
             className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[260px] w-[860px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.14),rgba(34,211,238,0.08),transparent_60%)] blur-3xl"
             aria-hidden="true"
           />
 
-          <div className="group relative overflow-hidden rounded-2xl border border-border bg-white/2 px-4 py-6 sm:px-6">
+          <div className="group relative rounded-2xl border border-border bg-white/2 px-4 py-6 sm:px-6">
             <div
               className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-background to-transparent"
               aria-hidden="true"

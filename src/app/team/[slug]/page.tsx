@@ -2,8 +2,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { Container } from "@/components";
-import { Footer } from "@/components/footer";
-import { Navbar } from "@/components/navbar";
 import { Reveal } from "@/components/shared";
 import { getTeamMemberBySlug } from "@/data/team";
 
@@ -65,10 +63,9 @@ export default async function TeamProfilePage({
 
   return (
     <>
-      <Navbar />
 
       <main>
-        <section className="ambient-section ambient-hero relative overflow-hidden py-20">
+        <section className="ambient-section ambient-hero relative overflow-x-hidden py-20">
           <Container>
             <Reveal className="mb-10" staggerChildren>
               <Link
@@ -81,7 +78,7 @@ export default async function TeamProfilePage({
 
             <div className="grid items-start gap-10 lg:grid-cols-2">
               <Reveal className="relative" delayMs={120}>
-                <div className="relative overflow-hidden rounded-2xl border border-border bg-card">
+                <div className="relative overflow-x-hidden rounded-2xl border border-border bg-card">
                   <div className="relative h-[360px] overflow-hidden bg-[radial-gradient(circle_at_30%_15%,rgba(59,130,246,0.18),transparent_55%),radial-gradient(circle_at_75%_25%,rgba(34,211,238,0.10),transparent_55%),linear-gradient(180deg,rgb(9,12,20),rgb(6,8,12))]">
                     <img
                       src={member.photo}
@@ -174,7 +171,7 @@ export default async function TeamProfilePage({
               </Reveal>
 
               <Reveal className="lg:col-span-5" staggerChildren delayMs={120}>
-                <div className="motion-card relative overflow-hidden rounded-2xl border border-border bg-card p-7 [--motion-card-shadow:0_22px_80px_-36px_rgba(59,130,246,0.55)]">
+                <div className="motion-card relative overflow-x-hidden rounded-2xl border border-border bg-card p-7 [--motion-card-shadow:0_22px_80px_-36px_rgba(59,130,246,0.55)]">
                   <div
                     className="pointer-events-none absolute -inset-8 -z-10 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.22),rgba(34,211,238,0.12),transparent_65%)] blur-3xl opacity-70"
                     aria-hidden="true"
@@ -213,7 +210,6 @@ export default async function TeamProfilePage({
         </section>
       </main>
 
-      <Footer />
     </>
   );
 }

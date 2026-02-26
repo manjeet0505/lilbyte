@@ -1,6 +1,4 @@
 import { Container } from "@/components";
-import { Footer } from "@/components/footer";
-import { Navbar } from "@/components/navbar";
 import { Reveal } from "@/components/shared";
 
 export default function PrivacyPage() {
@@ -37,9 +35,8 @@ export default function PrivacyPage() {
 
   return (
     <>
-      <Navbar />
       <main>
-        <section className="ambient-section ambient-hero relative overflow-hidden py-24">
+        <section className="ambient-section ambient-hero relative overflow-x-hidden py-24">
           <Container>
             <Reveal className="mx-auto max-w-3xl text-center" staggerChildren>
               <h1 className="font-display text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
@@ -85,7 +82,6 @@ export default function PrivacyPage() {
           </Container>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

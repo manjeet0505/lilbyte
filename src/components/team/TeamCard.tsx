@@ -37,7 +37,7 @@ function IconMail(props: { className?: string }) {
 
 export function TeamCard({ member }: { member: TeamMember }) {
   return (
-    <div className="motion-card group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card/90 backdrop-blur-sm hover:border-primary/40 hover:bg-card/95 hover:backdrop-blur-xl [--motion-card-shadow:0_22px_80px_-34px_rgba(59,130,246,0.65)]">
+    <div className="motion-card group relative flex h-full flex-col rounded-2xl border border-border bg-card/90 backdrop-blur-sm hover:border-primary/40 hover:bg-card/95 hover:backdrop-blur-xl [--motion-card-shadow:0_22px_80px_-34px_rgba(59,130,246,0.65)]">
       <Link
         href={`/team/${member.slug}`}
         className="absolute inset-0 z-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"

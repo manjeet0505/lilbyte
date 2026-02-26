@@ -43,7 +43,7 @@ export function Modules() {
           </p>
         </Reveal>
 
-        <div className="relative mt-14">
+        <div className="relative mt-14 overflow-hidden">
           <div
             className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[520px] w-[820px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.18),rgba(34,211,238,0.10),transparent_60%)] blur-3xl"
             aria-hidden="true"
@@ -62,7 +62,7 @@ export function Modules() {
                     aria-hidden="true"
                   />
 
-                  <div className="relative h-full rounded-2xl border border-border bg-card/90 p-6 backdrop-blur transition-all duration-300 ease-out group-hover:border-primary/40 group-hover:shadow-[0_26px_90px_-45px_rgba(59,130,246,0.55)]">
+                  <div className="relative h-full rounded-2xl p-6 transition-all duration-300 ease-out group-hover:shadow-[0_26px_90px_-45px_rgba(59,130,246,0.55)]">
                     <div
                       className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-b from-white/5 to-transparent"
                       aria-hidden="true"

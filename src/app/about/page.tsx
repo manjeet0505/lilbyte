@@ -1,12 +1,9 @@
 import { Container } from "@/components";
-import { Footer } from "@/components/footer";
-import { Navbar } from "@/components/navbar";
 import { Reveal } from "@/components/shared";
 
 export default function AboutPage() {
   return (
     <>
-      <Navbar />
       <main>
         <section className="ambient-section ambient-hero relative overflow-hidden py-24">
           <Container>
@@ -164,7 +161,6 @@ export default function AboutPage() {
           </Container>
         </section>
       </main>
-      <Footer />
     </>
   );
 }
