@@ -6,6 +6,9 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const { name, email, projectType, message } = body;
 
+    const emailUser = process.env.EMAIL_USER;
+    const emailPass = process.env.EMAIL_PASS;
+
     // Validate required fields
     if (!name || !email || !message) {
       return NextResponse.json(
@@ -14,19 +17,32 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    if (!emailUser || !emailPass) {
+      return NextResponse.json(
+        {
+          error:
+            'Server email is not configured. Missing EMAIL_USER / EMAIL_PASS environment variables.',
+        },
+        { status: 500 }
+      );
+    }
+
     // Create email transporter
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true,
       auth: {
-        user: process.env.EMAIL_USER, // Your Gmail address
-        pass: process.env.EMAIL_PASS, // Your Gmail app password
+        user: emailUser,
+        pass: emailPass,
       },
     });
 
     // Email to you (lilbyteorg@gmail.com)
     const mailOptions = {
-      from: process.env.EMAIL_USER,
+      from: emailUser,
       to: 'lilbyteorg@gmail.com',
+      replyTo: email,
       subject: `New Contact Form Submission - ${projectType}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -60,7 +76,7 @@ export async function POST(request: NextRequest) {
 
     // Send confirmation email to the user
     const confirmationMailOptions = {
-      from: process.env.EMAIL_USER,
+      from: emailUser,
       to: email,
       subject: 'Thank you for contacting LilByte Tech Studio',
       html: `
@@ -111,7 +127,10 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error('Contact form error:', error);
     return NextResponse.json(
-      { error: 'Failed to send email' },
+      {
+        error:
+          'Failed to send email. Please verify EMAIL_USER / EMAIL_PASS (Gmail App Password) and try again.',
+      },
       { status: 500 }
     );
   }
