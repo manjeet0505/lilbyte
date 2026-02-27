@@ -20,12 +20,8 @@ export const metadata: Metadata = {
   title: "Lilbyte",
   description: "SaaS startup",
   icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-    ],
-    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    icon: [{ url: "/logo/lilbyte-logo.png", type: "image/png" }],
+    apple: [{ url: "/logo/lilbyte-logo.png", type: "image/png" }],
   },
 };
 
@@ -41,10 +37,8 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://assets.calendly.com/assets/external/widget.css"
         />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
-        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+        <link rel="icon" type="image/png" href="/logo/lilbyte-logo.png" />
+        <link rel="apple-touch-icon" href="/logo/lilbyte-logo.png" />
       </head>
       <body
         className={`${inter.variable} ${sora.variable} antialiased overflow-x-hidden`}

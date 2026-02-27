@@ -38,7 +38,7 @@ export function Footer() {
             </div>
             <div className="flex items-center gap-3">
               <a
-                href="https://www.linkedin.com"
+                href="https://www.linkedin.com/company/lilbyte/"
                 aria-label="LilByte on LinkedIn"
                 className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background/60 text-muted transition-colors hover:border-primary hover:text-foreground"
               >
