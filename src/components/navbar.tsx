@@ -7,11 +7,11 @@ import { Container } from "@/components";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Products", href: "#products" },
-  { label: "Workflow", href: "#workflow" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "Products", href: "/#products" },
+  { label: "Workflow", href: "/#workflow" },
+  { label: "Pricing", href: "/#pricing" },
   { label: "Team", href: "/team" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "/#contact" },
 ] as const;
 
 export function Navbar() {
@@ -74,7 +74,7 @@ export function Navbar() {
           ))}
 
           <Link
-            href="#contact"
+            href="/#contact"
             className="group relative inline-flex h-10 items-center justify-center rounded-full bg-gradient-to-r from-primary to-primary/90 px-4 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background flex-shrink-0"
             style={{flexShrink: '0', minWidth: 'fit-content'}}
           >
@@ -124,7 +124,7 @@ export function Navbar() {
                 ))}
 
                 <Link
-                  href="#contact"
+                  href="/#contact"
                   className="mt-2 inline-flex h-10 items-center justify-center rounded-full bg-primary px-4 text-sm font-semibold text-primary-foreground transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                   onClick={() => setIsOpen(false)}
                 >

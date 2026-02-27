@@ -101,7 +101,7 @@ export function Pricing() {
 
                 <div className="mt-8">
                   <a
-                    href="#contact"
+                    href="/#contact"
                     className={
                       tier.highlighted
                         ? "motion-button inline-flex h-11 w-full items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"

@@ -94,6 +94,7 @@ export function Contact() {
                 className="space-y-5"
                 aria-describedby={formId}
                 onSubmit={handleSubmit}
+                suppressHydrationWarning
               >
                 <div>
                   <label
@@ -112,6 +113,7 @@ export function Contact() {
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Your name"
                     required
+                    suppressHydrationWarning
                   />
                 </div>
 
@@ -132,6 +134,7 @@ export function Contact() {
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="you@company.com"
                     required
+                    suppressHydrationWarning
                   />
                 </div>
 
@@ -148,6 +151,7 @@ export function Contact() {
                     className={inputClassName}
                     value={projectType}
                     onChange={(e) => setProjectType(e.target.value as ProjectType)}
+                    suppressHydrationWarning
                   >
                     <option value="Website">Website</option>
                     <option value="SaaS Product">SaaS Product</option>
@@ -172,6 +176,7 @@ export function Contact() {
                     placeholder="Tell us what you want to build..."
                     rows={6}
                     required
+                    suppressHydrationWarning
                   />
                 </div>
 
@@ -180,6 +185,7 @@ export function Contact() {
                     type="submit"
                     disabled={isSubmitting}
                     className="motion-button inline-flex h-11 w-full items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed"
+                    suppressHydrationWarning
                   >
                     {isSubmitting ? "Sending..." : "Send Message"}
                   </button>

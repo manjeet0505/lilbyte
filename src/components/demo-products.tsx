@@ -118,7 +118,7 @@ export function DemoProducts() {
 
                   <div className="mt-auto pt-7">
                     <a
-                      href="#demo"
+                      href="/#demo"
                       className="motion-button inline-flex h-10 w-full items-center justify-center rounded-full bg-primary px-4 text-sm font-semibold text-primary-foreground transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                     >
                       View Demo

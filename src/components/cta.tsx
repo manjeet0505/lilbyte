@@ -24,7 +24,7 @@ export function FinalCta() {
 
           <div className="mt-8 flex justify-center">
             <a
-              href="#contact"
+              href="/#contact"
               className="motion-button inline-flex h-11 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               Book a Free Consultation

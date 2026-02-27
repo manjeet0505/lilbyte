@@ -6,58 +6,61 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="hero-enter ambient-section ambient-hero relative overflow-hidden py-16 sm:py-20 md:py-24"
-      style={{paddingTop: '120px'}}
+      className="relative overflow-hidden ambient-section ambient-hero py-24 md:py-32"
     >
       <Container>
-        <div className="grid items-center gap-8 lg:gap-14 lg:grid-cols-2 overflow-x-hidden px-4 sm:px-6 md:px-0">
-          <div className="flex flex-col items-start">
-            <h1
-              className="hero-item font-display text-3xl font-semibold leading-tight tracking-tight text-foreground sm:text-4xl md:text-5xl"
-              style={{ "--enter-delay": "0ms" } as never}
-            >
-              Build AI-Powered Digital Products
+        <div className="grid items-center gap-14 lg:grid-cols-2">
+          
+          {/* LEFT CONTENT */}
+          <div className="relative z-10 max-w-2xl">
+            <h1 className="font-display text-4xl font-semibold leading-tight tracking-tight text-foreground sm:text-5xl md:text-6xl">
+              Build AI-Powered <br />
+              <span className="bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent">
+                Digital Products
+              </span>
             </h1>
 
-            <p
-              className="hero-item mt-4 max-w-xl text-sm leading-relaxed text-muted sm:text-base md:text-lg"
-              style={{ "--enter-delay": "120ms" } as never}
-            >
+            <p className="mt-6 text-base leading-relaxed text-muted sm:text-lg">
               LilByte Tech Studio helps startups launch scalable websites,
-              SaaS platforms, dashboards and automation systems worldwide.
+              SaaS platforms, dashboards, and intelligent automation systems
+              worldwide.
             </p>
 
-            <div
-              className="hero-item mt-8 flex flex-col gap-3 sm:flex-row"
-              style={{ "--enter-delay": "240ms" } as never}
-            >
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <a
-                href="#contact"
-                className="motion-button inline-flex h-11 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                href="/#contact"
+                className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-7 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
               >
                 Start Your Product
               </a>
 
               <a
-                href="#demo"
-                className="motion-button inline-flex h-11 items-center justify-center rounded-full border border-border bg-transparent px-6 text-sm font-semibold text-foreground transition-colors hover:bg-card focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                href="/#demo"
+                className="inline-flex h-12 items-center justify-center rounded-full border border-border bg-transparent px-7 text-sm font-semibold text-foreground transition hover:bg-card"
               >
                 View Demo
               </a>
             </div>
           </div>
 
-          <div className="relative overflow-hidden">
-            <div className="relative mx-auto w-full">
-              <div className="hero-illustration__glow" aria-hidden="true" />
+          {/* RIGHT IMAGE */}
+          <div className="relative flex justify-center lg:justify-end">
+            <div className="relative w-[320px] sm:w-[420px] lg:w-[500px] xl:w-[560px]">
+              
+              {/* Glow Background */}
+              <div
+                className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_60%_40%,rgba(59,130,246,0.35),transparent_70%)] blur-3xl opacity-80"
+                aria-hidden="true"
+              />
+
               <img
                 src="/hero/ai-illustration.png"
                 alt="AI product illustration"
-                className="hero-illustration__img w-full h-auto max-w-full object-contain"
-                loading="eager"
+                className="w-full object-contain drop-shadow-[0_60px_120px_rgba(0,0,0,0.6)]"
               />
             </div>
           </div>
+
         </div>
       </Container>
     </section>

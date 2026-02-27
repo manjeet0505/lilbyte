@@ -162,7 +162,7 @@ export default function TeamPage() {
                 style={{ "--enter-delay": "240ms" } as never}
               >
                 <Link
-                  href="#contact"
+                  href="/#contact"
                   className="motion-button inline-flex h-11 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                 >
                   Work With Our Team
@@ -503,7 +503,7 @@ export default function TeamPage() {
               </p>
               <div className="mt-8 flex justify-center">
                 <Link
-                  href="#contact"
+                  href="/#contact"
                   className="motion-button inline-flex h-11 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                 >
                   Start a Project

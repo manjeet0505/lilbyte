@@ -195,7 +195,7 @@ export const teamMembers: TeamMember[] = [
       "Deployment",
       "Backend Systems",
     ],
-    linkedin: "https://www.linkedin.com/in/manisha-dev/",
+    linkedin: "https://www.linkedin.com/in/manisha-rai-810b022a6",
     github: "https://github.com",
     email: "engineering@lilbyte.tech",
     bio: "Manisha works on mobile and cloud-based systems at LilByte. She specializes in application development, secure cloud deployment, and integrating data science workflows into real products to ensure scalability and reliability.",
