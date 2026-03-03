@@ -1,0 +1,10 @@
+export { teamMembers, getTeamMemberBySlug } from './team';
+export type { TeamMember } from './team';
+export { services } from './services';
+export type { ServiceModule } from './services';
+export { pricingPlans } from './pricing';
+export type { PricingPlan } from './pricing';
+export { faqItems } from './faq';
+export type { FaqItem } from './faq';
+export { demoProducts } from './portfolio';
+export type { DemoProduct } from './portfolio';
