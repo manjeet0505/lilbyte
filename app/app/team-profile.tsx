@@ -6,6 +6,7 @@ import {
   StyleSheet,
   TouchableOpacity,
   Linking,
+  Image,
 } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
@@ -62,7 +63,15 @@ export default function TeamProfileScreen() {
       {/* Profile Header */}
       <View style={styles.profileHeader}>
         <View style={styles.avatar}>
-          <Text style={styles.avatarText}>{member.initials}</Text>
+          {member.photo ? (
+            <Image
+              source={{ uri: member.photo }}
+              style={styles.avatarImage}
+              resizeMode="cover"
+            />
+          ) : (
+            <Text style={styles.avatarText}>{member.initials}</Text>
+          )}
         </View>
         <Text style={styles.name}>{member.name}</Text>
         <Text style={styles.role}>{member.role}</Text>
@@ -227,6 +236,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: 16,
+    overflow: 'hidden',
+  },
+  avatarImage: {
+    width: 88,
+    height: 88,
+    borderRadius: 44,
   },
   avatarText: {
     color: COLORS.primary,

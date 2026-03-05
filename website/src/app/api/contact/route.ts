@@ -1,6 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type',
+};
+
+export async function OPTIONS() {
+  return NextResponse.json({}, { headers: corsHeaders });
+}
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
@@ -13,7 +23,7 @@ export async function POST(request: NextRequest) {
     if (!name || !email || !message) {
       return NextResponse.json(
         { error: 'Missing required fields' },
-        { status: 400 }
+        { status: 400, headers: corsHeaders }
       );
     }
 
@@ -23,7 +33,7 @@ export async function POST(request: NextRequest) {
           error:
             'Server email is not configured. Missing EMAIL_USER / EMAIL_PASS environment variables.',
         },
-        { status: 500 }
+        { status: 500, headers: corsHeaders }
       );
     }
 
@@ -121,7 +131,7 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json(
       { message: 'Email sent successfully' },
-      { status: 200 }
+      { status: 200, headers: corsHeaders }
     );
 
   } catch (error) {
@@ -131,7 +141,7 @@ export async function POST(request: NextRequest) {
         error:
           'Failed to send email. Please verify EMAIL_USER / EMAIL_PASS (Gmail App Password) and try again.',
       },
-      { status: 500 }
+      { status: 500, headers: corsHeaders }
     );
   }
 }

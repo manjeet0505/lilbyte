@@ -5,6 +5,7 @@ import {
   Text,
   StyleSheet,
   TouchableOpacity,
+  Image,
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
@@ -68,14 +69,22 @@ export default function TeamScreen() {
               },
             ]}
           >
-            <Text
-              style={[
-                styles.avatarText,
-                { color: MEMBER_COLORS[index % MEMBER_COLORS.length] },
-              ]}
-            >
-              {member.initials}
-            </Text>
+            {member.photo ? (
+              <Image
+                source={{ uri: member.photo }}
+                style={styles.avatarImage}
+                resizeMode="cover"
+              />
+            ) : (
+              <Text
+                style={[
+                  styles.avatarText,
+                  { color: MEMBER_COLORS[index % MEMBER_COLORS.length] },
+                ]}
+              >
+                {member.initials}
+              </Text>
+            )}
           </View>
 
           {/* Info */}
@@ -191,6 +200,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 2,
+    overflow: 'hidden',
+  },
+  avatarImage: {
+    width: 60,
+    height: 60,
+    borderRadius: 30,
   },
   avatarText: {
     fontSize: 20,

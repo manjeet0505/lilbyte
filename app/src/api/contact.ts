@@ -2,16 +2,7 @@
  * API service layer – communicates with the website's backend
  */
 
-import { Platform } from 'react-native';
-
-// Android emulator uses 10.0.2.2 to reach host machine's localhost
-// iOS simulator and web can use localhost directly
-function getApiBaseUrl(): string {
-  if (Platform.OS === 'android') {
-    return 'http://10.0.2.2:3000';
-  }
-  return 'http://localhost:3000';
-}
+const API_BASE_URL = 'https://lilbyte.vercel.app';
 
 export type ProjectType = 'Website' | 'SaaS Product' | 'Mobile App' | 'AI Integration';
 
@@ -29,7 +20,7 @@ export type ApiResponse = {
 
 export async function submitContactForm(data: ContactFormData): Promise<ApiResponse> {
   try {
-    const response = await fetch(`${getApiBaseUrl()}/api/contact`, {
+    const response = await fetch(`${API_BASE_URL}/api/contact`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

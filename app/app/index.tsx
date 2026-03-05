@@ -55,11 +55,13 @@ export default function HomeScreen() {
     >
       {/* Hero Section */}
       <View style={styles.heroSection}>
-        <Image
-          source={require('../assets/dinosaur-logo.png')}
-          style={styles.heroLogo}
-          resizeMode="contain"
-        />
+        <View style={styles.heroLogoContainer}>
+          <Image
+            source={require('../assets/dinosaur-logo.png')}
+            style={styles.heroLogoImage}
+            resizeMode="contain"
+          />
+        </View>
 
         <View style={styles.heroBadge}>
           <Ionicons name="sparkles" size={12} color={COLORS.primary} />
@@ -244,10 +246,17 @@ const styles = StyleSheet.create({
     paddingTop: 20,
     alignItems: 'center',
   },
-  heroLogo: {
-    width: 120,
-    height: 120,
+  heroLogoContainer: {
+    width: 90,
+    height: 90,
+    borderRadius: 18,
+    overflow: 'hidden',
     marginBottom: 16,
+    backgroundColor: COLORS.card,
+  },
+  heroLogoImage: {
+    width: '100%',
+    height: '100%',
   },
   heroBadge: {
     flexDirection: 'row',
